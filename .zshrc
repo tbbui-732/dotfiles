@@ -105,9 +105,7 @@ source $ZSH/oh-my-zsh.sh
 #
 alias -g vim="nvim"
 alias -g v="nvim"
-alias -g nv="neovide"
 alias school="cd ~/Documents/UCONN/FALL2022/"
-alias rars="java -jar ~/risc-v-assembler/rars.jar"
 alias -g p="python3"
 alias -g sp="spotify"
 
@@ -117,7 +115,6 @@ alias nvimconfigs="cd ~/.config/nvim/lua/bao/"
 alias ls="exa"
 alias ll="exa -alh"
 alias tree="exa --tree"
-
 alias cat="bat"
 
 # Setting the paths for brew formulaes
