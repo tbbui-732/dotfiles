@@ -1,0 +1,8 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Thien-Bao Bui
+    email = 80117447+tbbui-732@users.noreply.github.com
+[init]
+	defaultBranch = main
+[core]
+    editor = nvim
