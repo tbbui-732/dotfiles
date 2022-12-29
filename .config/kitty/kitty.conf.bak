@@ -1,0 +1,42 @@
+# font family
+# font_family            Fira Mono for Powerline Regular
+# bold_font              Fira Mono for Powerline Bold
+# italic_font            Fira Mono for Powerline Regular
+# bold_italic_font       Fira Mono for Powerline Bold
+
+font_family              JetBrains Mono Regular
+bold_font                JetBrains Mono Bold
+italic_font              JetBrains Mono Italic
+bold_italic_font         JetBrains Mono Bold Italic
+
+font_size 16.0
+disable_ligatures never
+scrollback_lines 500
+sync_to_monitor no
+macos_quit_when_last_window_closed yes
+hide_window_decorations titlebar-only
+
+background_opacity 0.80
+macos_traditional_fullscreen no
+
+detect_urls yes
+
+# terminal bell
+enable_audio_bell yes
+window_alert_on_bell yes
+bell_on_tab "🤠 "
+
+# mouse hiding
+mouse_hide_wait -1.0
+cursor_blink_interval 0
+
+# tab bar adjustments
+tab_bar_edge top
+tab_bar_style powerline
+tab_powerline_style angled
+tab_bar_min_tabs 2
+
+# BEGIN_KITTY_THEME
+# GitHub Dark Dimmed
+include current-theme.conf
+# END_KITTY_THEME
