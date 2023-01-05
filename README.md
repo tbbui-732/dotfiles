@@ -11,7 +11,7 @@ https://sw.kovidgoyal.net/kitty/
 You can install pre-built binaries of kitty if you are on macOS or Linux using the following simple command:
 >curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 
-### [oh-mh-zsh]
+### [oh-my-zsh]
 https://ohmyz.sh/#install
 
 Install oh-my-zsh via curl
