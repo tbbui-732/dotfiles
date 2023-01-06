@@ -18,6 +18,7 @@ lsp.set_preferences({
 
 lsp.ensure_installed({
 	'sumneko_lua',
+    'pyright',
 })
 
 lsp.nvim_workspace()
