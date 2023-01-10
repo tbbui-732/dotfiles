@@ -13,7 +13,7 @@ return require('packer').startup(function(use)
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 
-	use { "ellisonleao/gruvbox.nvim"  }
+	use {'ellisonleao/gruvbox.nvim'}
 
 	use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
@@ -38,4 +38,6 @@ return require('packer').startup(function(use)
 			{'rafamadriz/friendly-snippets'},
 		}
 	}
+
+    use {'lervag/vimtex'}
 end)
