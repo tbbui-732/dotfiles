@@ -1,6 +1,8 @@
 vim.g.mapleader = ";"
 
-vim.opt.guicursor = ""
+-- uncomment if you only want block cursor
+-- vim.opt.guicursor = ""
+vim.opt.guicursor = "n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20"
 
 vim.opt.nu = true
 vim.opt.relativenumber = true
@@ -13,6 +15,7 @@ vim.opt.expandtab = true
 vim.opt.smartindent = true
 
 vim.opt.wrap = true
+vim.opt.linebreak = true
 
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
