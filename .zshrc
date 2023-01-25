@@ -73,9 +73,9 @@ fi
 # export ARCHFLAGS="-arch x86_64"
 
 # ///--- ALIASES ---///
-alias -g vim="nvim"
+alias -g vim="vim"
 alias -g v="nvim"
-alias school="cd ~/Documents/UCONN/FALL2022/"
+alias school="cd ~/Documents/uconn/S23/"
 alias -g p="python3"
 alias -g sp="spotify"
 
@@ -91,8 +91,8 @@ alias cat="bat"
 
 # git
 alias gap="git add --patch"
-alias gc="git commit"
 alias gcm="git commit -m"
+alias gc="git commit"
 alias gp="git push"
 alias gpu="git pull"
 alias gck="git checkout"

@@ -15,6 +15,10 @@ return require('packer').startup(function(use)
 
 	use {'ellisonleao/gruvbox.nvim'}
 
+    use {'tanvirtin/monokai.nvim'}
+
+    use {'Abstract-IDE/Abstract-cs'}
+
 	use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
 	use {

@@ -3,7 +3,7 @@ require("bao.set")
 
 -- /// Background Color /// --
 vim.o.background = "dark" -- or "light" for light mode
-vim.cmd([[colorscheme gruvbox]])
+vim.cmd([[colorscheme monokai]])
 
 -- /// Personal Functions /// -- 
 local function transparent()
