@@ -6,12 +6,19 @@
 export ZSH="$HOME/.oh-my-zsh"
 
 # ///--- THEME ---///
-ZSH_THEME="gnzh"
+#ZSH_THEME="gnzh"
 
-# uncomment to use "pure" theme
-# autoload -U promptinit; promptinit
-# prompt pure
-# ZSH_THEME="pure"
+# User configuration (for pure...)
+ZSH_THEME=""
+fpath+=("$(brew --prefix)/share/zsh/site-functions")
+fpath+=($HOME/.zsh/pure)
+
+autoload -U promptinit; promptinit
+prompt pure
+
+zstyle :prompt:pure:prompt:success color green
+zstyle :prompt:pure:git:branch color green
+zstyle :prompt:pure:path color cyan
 
 # ///--- SETTINGS ---///
 CASE_SENSITIVE="false"
@@ -56,9 +63,6 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
-# fpath+=("$(brew --prefix)/share/zsh/site-functions")
-
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 
@@ -73,7 +77,7 @@ fi
 # export ARCHFLAGS="-arch x86_64"
 
 # ///--- ALIASES ---///
-alias -g vim="vim"
+alias -g vim="nvim"
 alias -g v="nvim"
 alias school="cd ~/Documents/uconn/S23/"
 alias -g p="python3"

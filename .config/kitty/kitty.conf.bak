@@ -9,7 +9,7 @@ bold_font                JetBrains Mono Bold
 italic_font              JetBrains Mono Italic
 bold_italic_font         JetBrains Mono Bold Italic
 
-font_size 20.0
+font_size 17.0
 disable_ligatures never
 scrollback_lines 500
 sync_to_monitor no
@@ -37,6 +37,6 @@ tab_powerline_style angled
 tab_bar_min_tabs 2
 
 # BEGIN_KITTY_THEME
-# Ubuntu
+# Catppuccin-Frappe
 include current-theme.conf
 # END_KITTY_THEME
