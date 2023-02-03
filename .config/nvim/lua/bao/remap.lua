@@ -14,3 +14,6 @@ vim.keymap.set('n', 'j', function()
     end
     return 'j'
 end, {expr = true, noremap = true})
+
+-- Return to Netrw Explorer
+vim.keymap.set('n', '<leader>ee', ':Ex<Cr>')
