@@ -16,7 +16,7 @@ sync_to_monitor no
 macos_quit_when_last_window_closed yes
 hide_window_decorations titlebar-only
 
-background_opacity 0.90
+background_opacity 0.85
 macos_traditional_fullscreen no
 
 detect_urls yes
@@ -37,6 +37,6 @@ tab_powerline_style angled
 tab_bar_min_tabs 2
 
 # BEGIN_KITTY_THEME
-# fairyfloss
+# VSCode_Dark
 include current-theme.conf
 # END_KITTY_THEME

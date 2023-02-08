@@ -1,5 +1,3 @@
-vim.g.mapleader = ";"
-
 -- uncomment if you only want block cursor
 -- vim.opt.guicursor = ""
 vim.opt.guicursor = "n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20"
