@@ -18,9 +18,9 @@ lsp.set_preferences({
 
 -- Automatically displays diagnostics
 vim.api.nvim_create_autocmd({"CursorHold"}, {
-    callback = function()
-        vim.diagnostic.open_float()
-    end
+  callback = function()
+    vim.diagnostic.open_float()
+  end
 })
 
 lsp.nvim_workspace()
