@@ -105,6 +105,9 @@ alias gck="git checkout"
 export CPATH=/opt/homebrew/include
 export LIBRARY_PATH=/opt/homebrew/lib
 
+# ssh settings
+alias s="kitty +kitten ssh"
+
 # Nvm settings
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

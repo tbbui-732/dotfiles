@@ -16,10 +16,6 @@ lsp.set_preferences({
   }
 })
 
-lsp.ensure_installed({
-	'sumneko_lua',
-})
-
 -- Automatically displays diagnostics
 vim.api.nvim_create_autocmd({"CursorHold"}, {
     callback = function()

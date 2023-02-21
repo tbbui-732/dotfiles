@@ -17,8 +17,6 @@ return require('packer').startup(function(use)
 
     use {'tanvirtin/monokai.nvim'}
 
-    use {'Abstract-IDE/Abstract-cs'}
-
 	use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
 	use {
@@ -50,13 +48,10 @@ return require('packer').startup(function(use)
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
 
-    use({
-        'rose-pine/neovim',
-        as = 'rose-pine',
-        config = function()
-            require("rose-pine").setup()
-            vim.cmd('colorscheme rose-pine')
-        end
-    })
+    use {'rebelot/kanagawa.nvim'}
 
+    use {'petertriho/nvim-scrollbar'}
+
+    use {"bluz71/vim-moonfly-colors", as = "moonfly"}
 end)
+
