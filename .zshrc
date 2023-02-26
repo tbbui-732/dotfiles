@@ -77,7 +77,7 @@ fi
 # export ARCHFLAGS="-arch x86_64"
 
 # ///--- ALIASES ---///
-alias -g vim="nvim"
+# alias -g vim="nvim"
 alias -g v="nvim"
 alias school="cd ~/Documents/uconn/S23/"
 alias -g p="python3"
