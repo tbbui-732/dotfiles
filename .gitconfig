@@ -5,4 +5,8 @@
 [init]
 	defaultBranch = main
 [core]
-    editor = nvim
+  editor = nvim
+[maintenance]
+	repo = /Users/brian-bui/.dotfile
+	repo = /Users/brian-bui/.nvm
+	repo = /Users/brian-bui/.oh-my-zsh
