@@ -1,6 +1,4 @@
--- This file can be loaded by calling `lua require('plugins')` from your init.vim
-
--- Only required if you have packer configured as `opt`
+-- This file can be loaded by calling `lua require('plugins')` from your init.vim Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
@@ -15,11 +13,12 @@ return require('packer').startup(function(use)
   }
 
   -- Colorschemes + Treesitter
-  use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = function() require("nvim-treesitter.install").update { with_sync = true } end,
+  }
   use {'ellisonleao/gruvbox.nvim'}
-  use {'tanvirtin/monokai.nvim'}
-  use {'rebelot/kanagawa.nvim'}
-  use {"bluz71/vim-moonfly-colors", as = "moonfly"}
+  use {'Mofiqul/adwaita.nvim'}
 
   -- Language Server
   use {
@@ -57,14 +56,6 @@ return require('packer').startup(function(use)
   use {"lukas-reineke/indent-blankline.nvim"}
 
   use {
-    'nvim-tree/nvim-tree.lua',
-    requires = {
-      'nvim-tree/nvim-web-devicons', -- optional, for file icons
-    },
-    tag = 'nightly' -- optional, updated every week. (see issue #1193)
-  }
-
-  use {
     "folke/todo-comments.nvim",
     requires = "nvim-lua/plenary.nvim",
     config = function()
@@ -77,4 +68,3 @@ return require('packer').startup(function(use)
   }
 
 end)
-
