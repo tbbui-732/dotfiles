@@ -4,12 +4,13 @@ bold_font                JetBrains Mono Bold
 italic_font              JetBrains Mono Italic
 bold_italic_font         JetBrains Mono Bold Italic
 
-font_size 17.0
+font_size 18.0
 disable_ligatures always
 scrollback_lines 500
 sync_to_monitor no
 macos_quit_when_last_window_closed yes
 hide_window_decorations titlebar-only
+# hide_window_decorations no
 
 background_opacity 1.00
 macos_traditional_fullscreen no
@@ -32,6 +33,6 @@ tab_powerline_style angled
 tab_bar_min_tabs 2
 
 # BEGIN_KITTY_THEME
-# Xcodedark
+# Catppuccin-Frappe
 include current-theme.conf
 # END_KITTY_THEME

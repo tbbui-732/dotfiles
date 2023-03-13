@@ -95,11 +95,12 @@ function ranger {
 }
 
 # ///--- ALIASES ---///
-alias -g vim="nvim"
-alias -g v="nvim"
+alias vim="nvim"
+alias v="nvim"
 alias school="cd ~/Documents/uconn/S23/"
-alias -g p="python3"
-alias -g sp="spotify"
+alias p="python3"
+alias sp="spotify"
+alias r="ranger"
 
 # quick config changes
 alias kittyconfig="nvim ~/.config/kitty/kitty.conf"
