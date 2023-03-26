@@ -16,8 +16,8 @@ vim.keymap.set('n', 'j', function()
 end, {expr = true, noremap = true})
 
 -- Return to netrw
-vim.keymap.set('n', '<leader>ef', ':Ex<CR>');
+-- vim.keymap.set('n', '<leader>ef', ':Ex<CR>');
 
 -- Open Nvim Tree
--- vim.keymap.set('n', '<leader>ee', ':NvimTreeToggle<CR>')
--- vim.keymap.set('n', '<leader>ef', ':NvimTreeFocus<CR>')
+vim.keymap.set('n', '<leader>ee', ':NvimTreeToggle<CR>')
+vim.keymap.set('n', '<leader>ef', ':NvimTreeFocus<CR>')
