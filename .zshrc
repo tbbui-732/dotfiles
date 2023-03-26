@@ -6,19 +6,20 @@
 export ZSH="$HOME/.oh-my-zsh"
 
 # ///--- THEME ---///
-#ZSH_THEME="gnzh"
+ZSH_THEME="gnzh"
+#ZSH_THEME="minimal"
 
 # User configuration (for pure...)
-ZSH_THEME=""
-fpath+=("$(brew --prefix)/share/zsh/site-functions")
-fpath+=($HOME/.zsh/pure)
-
-autoload -U promptinit; promptinit
-prompt pure
-
-zstyle :prompt:pure:prompt:success color green
-zstyle :prompt:pure:git:branch color green
-zstyle :prompt:pure:path color cyan
+# ZSH_THEME=""
+# fpath+=("$(brew --prefix)/share/zsh/site-functions")
+# fpath+=($HOME/.zsh/pure)
+# 
+# autoload -U promptinit; promptinit
+# prompt pure
+# 
+# zstyle :prompt:pure:prompt:success color green
+# zstyle :prompt:pure:git:branch color green
+# zstyle :prompt:pure:path color cyan
 
 # ///--- SETTINGS ---///
 CASE_SENSITIVE="false"
