@@ -11,6 +11,12 @@ return require('packer').startup(function(use)
     -- or                            , branch = '0.1.x',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
+  use {
+    'nvim-tree/nvim-tree.lua',
+    requires = {
+      'nvim-tree/nvim-web-devicons', -- optional
+    },
+  }
 
   -- Colorschemes + Treesitter
   use {
@@ -19,6 +25,7 @@ return require('packer').startup(function(use)
   }
   use {'ellisonleao/gruvbox.nvim'}
   use {'Mofiqul/adwaita.nvim'}
+  use {'Mofiqul/vscode.nvim'}
 
   -- Language Server
   use {
@@ -46,11 +53,6 @@ return require('packer').startup(function(use)
   use {'lervag/vimtex'}
 
   -- Nvim editing support
-  use {
-    'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-  }
-
   use {'petertriho/nvim-scrollbar'}
 
   use {"lukas-reineke/indent-blankline.nvim"}
