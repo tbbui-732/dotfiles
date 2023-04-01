@@ -5,19 +5,17 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
-  -- Telescope, navigation
+  -- Navigation
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
     -- or                            , branch = '0.1.x',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
 
-  -- use {
-  --   'nvim-tree/nvim-tree.lua',
-  --   requires = {
-  --     'nvim-tree/nvim-web-devicons', -- optional
-  --   },
-  -- }
+  use {
+    'ThePrimeagen/harpoon',
+    requires = {'nvim-lua/plenary.nvim'},
+  }
 
   -- Colorschemes + Treesitter
   use {
@@ -51,9 +49,10 @@ return require('packer').startup(function(use)
     }
   }
 
+  -- LaTex
   use {'lervag/vimtex'}
 
-  -- Nvim editing support
+  -- Editing support
   use {'petertriho/nvim-scrollbar'}
 
   use {"lukas-reineke/indent-blankline.nvim"}
