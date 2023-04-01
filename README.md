@@ -1,5 +1,6 @@
 # Things I use:
 
-## neovim
-## kitty term
-## omz
+## editor: [neovim]
+## terminal: [kitty]
+## shell: [zsh + omz]
+## window manager: [yabai + skhd]
