@@ -25,6 +25,8 @@ return require('packer').startup(function(use)
   use {'ellisonleao/gruvbox.nvim'}
   use {'Mofiqul/adwaita.nvim'}
   use {'Mofiqul/vscode.nvim'}
+  use {'Mofiqul/dracula.nvim'}
+  use { "catppuccin/nvim", as = "catppuccin" }
 
   -- Language Server
   use {
