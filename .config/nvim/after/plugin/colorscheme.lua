@@ -1,51 +1,54 @@
 -- background color
 vim.o.background = "dark" -- "dark" for dark mode or "light" for light mode
 
--- catpuccin
-require("catppuccin").setup({
-    flavour = "mocha", -- latte, frappe, macchiato, mocha
-    background = { -- :h background
-        light = "latte",
-        dark = "mocha",
-    },
-    transparent_background = true,
-    show_end_of_buffer = false, -- show the '~' characters after the end of buffers
-    term_colors = false,
-    dim_inactive = {
-        enabled = false,
-        shade = "dark",
-        percentage = 0.15,
-    },
-    no_italic = true, -- Force no italic
-    no_bold = false, -- Force no bold
-    styles = {
-        comments = { "italic" },
-        conditionals = { "italic" },
-        loops = {},
-        functions = {},
-        keywords = {},
-        strings = {},
-        variables = {},
-        numbers = {},
-        booleans = {},
-        properties = {},
-        types = {},
-        operators = {},
-    },
-    color_overrides = {},
-    custom_highlights = {},
-    integrations = {
-        cmp = true,
-        gitsigns = false,
-        nvimtree = false,
-        telescope = true,
-        notify = false,
-        mini = false,
-        harpoon = true,
-        -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
-    },
-})
-vim.cmd.colorscheme "catppuccin"
+-- oxocarbon
+vim.cmd("colorscheme oxocarbon");
+
+-- -- catpuccin
+-- require("catppuccin").setup({
+--     flavour = "mocha", -- latte, frappe, macchiato, mocha
+--     background = { -- :h background
+--         light = "latte",
+--         dark = "mocha",
+--     },
+--     transparent_background = true,
+--     show_end_of_buffer = false, -- show the '~' characters after the end of buffers
+--     term_colors = false,
+--     dim_inactive = {
+--         enabled = false,
+--         shade = "dark",
+--         percentage = 0.15,
+--     },
+--     no_italic = true, -- Force no italic
+--     no_bold = false, -- Force no bold
+--     styles = {
+--         comments = { "italic" },
+--         conditionals = { "italic" },
+--         loops = {},
+--         functions = {},
+--         keywords = {},
+--         strings = {},
+--         variables = {},
+--         numbers = {},
+--         booleans = {},
+--         properties = {},
+--         types = {},
+--         operators = {},
+--     },
+--     color_overrides = {},
+--     custom_highlights = {},
+--     integrations = {
+--         cmp = true,
+--         gitsigns = false,
+--         nvimtree = false,
+--         telescope = true,
+--         notify = false,
+--         mini = false,
+--         harpoon = true,
+--         -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
+--     },
+-- })
+-- vim.cmd.colorscheme "catppuccin"
 
 -- -- dracula colorscheme
 -- local dracula = require("dracula")
@@ -131,20 +134,20 @@ vim.cmd.colorscheme "catppuccin"
 -- vim.cmd([[colorscheme adwaita]])
 
 -- transparency
--- local function transparent_override()
-    --    local highlights = {
-        --      "Normal",
-        --      "LineNr",
-        --      "Folded",
-        --      "NonText",
-        --      "SpecialKey",
-        --      "VertSplit",
-        --      "SignColumn",
-        --      "EndOfBuffer",
-        --      "TablineFill"
-        --    }
-        --    for _, name in pairs(highlights) do
-        --      vim.cmd.highlight(name .. ' guibg=none ctermbg=none')
-        --    end
-        --  end
-        -- transparent_override()
+local function transparent_override()
+    local highlights = {
+        "Normal",
+        "LineNr",
+        "Folded",
+        "NonText",
+        "SpecialKey",
+        "VertSplit",
+        "SignColumn",
+        "EndOfBuffer",
+        "TablineFill"
+    }
+    for _, name in pairs(highlights) do
+        vim.cmd.highlight(name .. ' guibg=none ctermbg=none')
+    end
+end
+transparent_override()

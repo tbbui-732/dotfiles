@@ -27,6 +27,7 @@ return require('packer').startup(function(use)
     use {'Mofiqul/vscode.nvim'}
     use {'Mofiqul/dracula.nvim'}
     use { "catppuccin/nvim", as = "catppuccin" }
+    use {'nyoom-engineering/oxocarbon.nvim'}
 
     -- Language Server
     use {
