@@ -1,10 +1,7 @@
 -- background color
 vim.o.background = "dark" -- "dark" for dark mode or "light" for light mode
 
--- oxocarbon
-vim.cmd("colorscheme oxocarbon");
-
--- -- catpuccin
+-- catpuccin
 -- require("catppuccin").setup({
 --     flavour = "mocha", -- latte, frappe, macchiato, mocha
 --     background = { -- :h background
@@ -50,7 +47,7 @@ vim.cmd("colorscheme oxocarbon");
 -- })
 -- vim.cmd.colorscheme "catppuccin"
 
--- -- dracula colorscheme
+-- dracula colorscheme
 -- local dracula = require("dracula")
 -- dracula.setup({
 --     -- customize dracula color palette
@@ -85,7 +82,7 @@ vim.cmd("colorscheme oxocarbon");
 --     -- set custom lualine background color
 --     lualine_bg_color = "#44475a", -- default nil
 --     -- set italic comment
---     italic_comment = true, -- default false
+--     italic_comment = false, -- default false
 --     -- overrides the default highlights see `:h synIDattr`
 --     overrides = {
 --         -- Examples
@@ -94,10 +91,9 @@ vim.cmd("colorscheme oxocarbon");
 --         -- Nothing = {} -- clear highlight of Nothing
 --     },
 -- })
--- vim.cmd[[colorscheme dracula]]
+-- vim.cmd.colorscheme "dracula"
 
--- Lua:
--- -- vscode colorscheme
+-- vscode colorscheme
 -- local c = require('vscode.colors').get_colors()
 -- require('vscode').setup({
 --     -- Alternatively set style in setup
@@ -126,28 +122,34 @@ vim.cmd("colorscheme oxocarbon");
 -- })
 -- require('vscode').load()
 
-
 -- adwaita colorscheme
 -- vim.g.adwaita_darker = false -- for darker version
--- vim.g.adwaita_disable_cursorline = true -- to disable cursorline
+-- vim.g.adwaita_disable_cursorline = false -- to disable cursorline
 -- vim.g.adwaita_transparent = true -- makes the background transparent
--- vim.cmd([[colorscheme adwaita]])
+-- vim.cmd.colorscheme "adwaita"
+
+-- gruvbox
+vim.cmd("let g:gruvbox_material_background = 'mix'")
+vim.cmd("let g:gruvbox_material_better_performance = 1")
+vim.cmd("let g:gruvbox_material_foreground = 'material'")
+vim.cmd("let g:gruvbox_material_transparent_background = 2") -- allows other UI elements to be transparent as well
+vim.cmd.colorscheme "gruvbox-material"
 
 -- transparency
-local function transparent_override()
-    local highlights = {
-        "Normal",
-        "LineNr",
-        "Folded",
-        "NonText",
-        "SpecialKey",
-        "VertSplit",
-        "SignColumn",
-        "EndOfBuffer",
-        "TablineFill"
-    }
-    for _, name in pairs(highlights) do
-        vim.cmd.highlight(name .. ' guibg=none ctermbg=none')
-    end
-end
-transparent_override()
+-- local function transparent_override()
+--     local highlights = {
+--         "Normal",
+--         "LineNr",
+--         "Folded",
+--         "NonText",
+--         "SpecialKey",
+--         "VertSplit",
+--         "SignColumn",
+--         "EndOfBuffer",
+--         "TablineFill"
+--     }
+--     for _, name in pairs(highlights) do
+--         vim.cmd.highlight(name .. ' guibg=none ctermbg=none')
+--     end
+-- end
+-- transparent_override()

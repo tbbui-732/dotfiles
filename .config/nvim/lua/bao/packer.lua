@@ -22,12 +22,11 @@ return require('packer').startup(function(use)
         'nvim-treesitter/nvim-treesitter',
         run = function() require("nvim-treesitter.install").update { with_sync = true } end,
     }
-    use {'ellisonleao/gruvbox.nvim'}
     use {'Mofiqul/adwaita.nvim'}
     use {'Mofiqul/vscode.nvim'}
     use {'Mofiqul/dracula.nvim'}
-    use { "catppuccin/nvim", as = "catppuccin" }
-    use {'nyoom-engineering/oxocarbon.nvim'}
+    use {"catppuccin/nvim", as = "catppuccin"}
+    use {'sainnhe/gruvbox-material'}
 
     -- Language Server
     use {
