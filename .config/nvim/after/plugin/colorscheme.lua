@@ -94,33 +94,33 @@ vim.o.background = "dark" -- "dark" for dark mode or "light" for light mode
 -- vim.cmd.colorscheme "dracula"
 
 -- vscode colorscheme
--- local c = require('vscode.colors').get_colors()
--- require('vscode').setup({
---     -- Alternatively set style in setup
---     -- style = 'light'
--- 
---     -- Enable transparent background
---     transparent = true,
--- 
---     -- Enable italic comment
---     italic_comments = false,
--- 
---     -- Disable nvim-tree background color
---     disable_nvimtree_bg = true,
--- 
---     -- Override colors (see ./lua/vscode/colors.lua)
---     color_overrides = {
---         vscLineNumber = '#FFFFFF',
---     },
--- 
---     -- Override highlight groups (see ./lua/vscode/theme.lua)
---     group_overrides = {
---         -- this supports the same val table as vim.api.nvim_set_hl
---         -- use colors from this colorscheme by requiring vscode.colors!
---         Cursor = { fg=c.vscDarkBlue, bg=c.vscLightGreen, bold=true },
---     }
--- })
--- require('vscode').load()
+--local c = require('vscode.colors').get_colors()
+--require('vscode').setup({
+--    -- Alternatively set style in setup
+--    -- style = 'light'
+--
+--    -- Enable transparent background
+--    transparent = true,
+--
+--    -- Enable italic comment
+--    italic_comments = true,
+--
+--    -- Disable nvim-tree background color
+--    disable_nvimtree_bg = true,
+--
+--    -- Override colors (see ./lua/vscode/colors.lua)
+--    color_overrides = {
+--        vscLineNumber = '#FFFFFF',
+--    },
+--
+--    -- Override highlight groups (see ./lua/vscode/theme.lua)
+--    group_overrides = {
+--        -- this supports the same val table as vim.api.nvim_set_hl
+--        -- use colors from this colorscheme by requiring vscode.colors!
+--        Cursor = { fg=c.vscDarkBlue, bg=c.vscLightGreen, bold=true },
+--    }
+--})
+--require('vscode').load()
 
 -- adwaita colorscheme
 -- vim.g.adwaita_darker = false -- for darker version
@@ -129,27 +129,33 @@ vim.o.background = "dark" -- "dark" for dark mode or "light" for light mode
 -- vim.cmd.colorscheme "adwaita"
 
 -- gruvbox
-vim.cmd("let g:gruvbox_material_background = 'mix'")
-vim.cmd("let g:gruvbox_material_better_performance = 1")
-vim.cmd("let g:gruvbox_material_foreground = 'material'")
-vim.cmd("let g:gruvbox_material_transparent_background = 2") -- allows other UI elements to be transparent as well
-vim.cmd.colorscheme "gruvbox-material"
+-- vim.cmd("let g:gruvbox_material_background = 'mix'")
+-- vim.cmd("let g:gruvbox_material_better_performance = 1")
+-- vim.cmd("let g:gruvbox_material_foreground = 'material'")
+-- vim.cmd("let g:gruvbox_material_transparent_background = 2") -- allows other UI elements to be transparent as well
+-- vim.cmd.colorscheme "gruvbox-material"
+
+-- poimandres
+-- vim.cmd.colorscheme "poimandres"
+
+-- sonokai
+vim.cmd.colorscheme "sonokai"
 
 -- transparency
--- local function transparent_override()
---     local highlights = {
---         "Normal",
---         "LineNr",
---         "Folded",
---         "NonText",
---         "SpecialKey",
---         "VertSplit",
---         "SignColumn",
---         "EndOfBuffer",
---         "TablineFill"
---     }
---     for _, name in pairs(highlights) do
---         vim.cmd.highlight(name .. ' guibg=none ctermbg=none')
---     end
--- end
--- transparent_override()
+local function transparent_override()
+    local highlights = {
+        "Normal",
+        "LineNr",
+        "Folded",
+        "NonText",
+        "SpecialKey",
+        "VertSplit",
+        "SignColumn",
+        "EndOfBuffer",
+        "TablineFill"
+    }
+    for _, name in pairs(highlights) do
+        vim.cmd.highlight(name .. ' guibg=none ctermbg=none')
+    end
+end
+transparent_override()

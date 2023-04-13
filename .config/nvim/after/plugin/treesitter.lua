@@ -8,7 +8,7 @@ require'nvim-treesitter.configs'.setup {
         "query",
         "javascript",
         "typescript",
-        "python",
+        "python"
     },
 
     -- Install parsers synchronously (only applied to `ensure_installed`)
@@ -19,7 +19,7 @@ require'nvim-treesitter.configs'.setup {
     auto_install = true,
 
     -- List of parsers to ignore installing (for "all")
-    --ignore_install = { "javascript" },
+    ignore_install = { "java" },
 
     ---- If you need to change the installation directory of the parsers (see -> Advanced Setup)
     -- parser_install_dir = "/some/path/to/store/parsers", -- Remember to run vim.opt.runtimepath:append("/some/path/to/store/parsers")!
