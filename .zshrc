@@ -96,7 +96,6 @@ function ranger {
 }
 
 # ///--- ALIASES ---///
-alias vim="nvim"
 alias v="nvim"
 alias school="cd ~/Documents/uconn/S23/"
 alias p="python3"
