@@ -139,23 +139,27 @@ vim.o.background = "dark" -- "dark" for dark mode or "light" for light mode
 -- vim.cmd.colorscheme "poimandres"
 
 -- sonokai
+vim.cmd("let g:sonokai_transparent_background = 2")
+vim.cmd("let g:sonokai_better_performance = 0")
 vim.cmd.colorscheme "sonokai"
 
 -- transparency
-local function transparent_override()
-    local highlights = {
-        "Normal",
-        "LineNr",
-        "Folded",
-        "NonText",
-        "SpecialKey",
-        "VertSplit",
-        "SignColumn",
-        "EndOfBuffer",
-        "TablineFill"
-    }
-    for _, name in pairs(highlights) do
-        vim.cmd.highlight(name .. ' guibg=none ctermbg=none')
-    end
-end
-transparent_override()
+-- local function transparent_override()
+--     local highlights = {
+--         "Normal",
+--         "LineNr",
+--         "Folded",
+--         "NonText",
+--         "SpecialKey",
+--         "VertSplit",
+--         "SignColumn",
+--         "EndOfBuffer",
+--         "TablineFill",
+--         "HarpoonWindow",  -- harpoon plugin
+--         "HarpoonBorder"
+--     }
+--     for _, name in pairs(highlights) do
+--         vim.cmd.highlight(name .. ' guibg=none ctermbg=none')
+--     end
+-- end
+-- transparent_override()
