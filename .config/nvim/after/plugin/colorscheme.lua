@@ -1,5 +1,5 @@
 -- background color
-vim.o.background = "dark" -- "dark" for dark mode or "light" for light mode
+vim.o.background = "dark"
 
 -- catpuccin
 -- require("catppuccin").setup({
@@ -141,25 +141,26 @@ vim.o.background = "dark" -- "dark" for dark mode or "light" for light mode
 -- sonokai
 vim.cmd("let g:sonokai_transparent_background = 2")
 vim.cmd("let g:sonokai_better_performance = 0")
+vim.cmd("let g:sonokai_disable_italic_comment=1")
 vim.cmd.colorscheme "sonokai"
 
 -- transparency
--- local function transparent_override()
---     local highlights = {
---         "Normal",
---         "LineNr",
---         "Folded",
---         "NonText",
---         "SpecialKey",
---         "VertSplit",
---         "SignColumn",
---         "EndOfBuffer",
---         "TablineFill",
---         "HarpoonWindow",  -- harpoon plugin
---         "HarpoonBorder"
---     }
---     for _, name in pairs(highlights) do
---         vim.cmd.highlight(name .. ' guibg=none ctermbg=none')
---     end
--- end
--- transparent_override()
+local function transparent_override()
+    local highlights = {
+        "Normal",
+        "LineNr",
+        "Folded",
+        "NonText",
+        "SpecialKey",
+        "VertSplit",
+        "SignColumn",
+        "EndOfBuffer",
+        "TablineFill",
+        "HarpoonWindow",  -- harpoon plugin
+        "HarpoonBorder"
+    }
+    for _, name in pairs(highlights) do
+        vim.cmd.highlight(name .. ' guibg=none ctermbg=none')
+    end
+end
+transparent_override()

@@ -1,18 +1,18 @@
-# font family
-# font_family          JetBrains Mono Regular
-# bold_font            JetBrains Mono Bold
-# italic_font          JetBrains Mono Italic
-# bold_italic_font     JetBrains Mono Bold Italic
+# Fonts
+font_family          JetBrains Mono Regular
+bold_font            JetBrains Mono Bold
+italic_font          JetBrains Mono Italic
+bold_italic_font     JetBrains Mono Bold Italic
 
 # font_family         Hack Regular
 # bold_font           Hack Bold
 # italic_font         Hack Italic
 # bold_italic_font    Hack Bold Italic
 
-font_family         Victor Mono Regular
-bold_font           Victor Mono Bold
-italic_font         Victor Mono Italic
-bold_italic_font    Victor Mono Bold Italic
+# font_family         Victor Mono Regular
+# bold_font           Victor Mono Bold
+# italic_font         Victor Mono Italic
+# bold_italic_font    Victor Mono Bold Italic
 
 font_size 16.0
 disable_ligatures always
@@ -43,6 +43,6 @@ tab_powerline_style angled
 tab_bar_min_tabs 2
 
 # BEGIN_KITTY_THEME
-# Snazzy
+# Default
 include current-theme.conf
 # END_KITTY_THEME
