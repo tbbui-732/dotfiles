@@ -101,7 +101,6 @@ alias v="nvim"
 alias school="cd ~/Documents/uconn/S23/"
 alias p="python3"
 alias sp="spotify"
-alias r="nnn"
 
 # quick config changes
 alias kittyconfig="nvim ~/.config/kitty/kitty.conf"
@@ -134,7 +133,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # nnn on-demand cd on quit
-n() {
+# aliased r to open nnn
+r() {
     # Block nesting of nnn in subshells
     if [[ "${NNNLVL:-0}" -ge 1 ]]; then
         echo "nnn is already running"
@@ -154,7 +154,7 @@ n() {
     # stty lwrap undef
     # stty lnext undef
 
-    # The backslash allows one to alias n to nnn if desired without making an
+    # The backslash allows one to alias r to nnn if desired without making an
     # infinitely recursive alias
     \nnn "$@"
 
