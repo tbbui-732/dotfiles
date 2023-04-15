@@ -79,28 +79,29 @@ fi
 
 # Ranger file explorer
 # 'Q' exits ranger AND cd's into last pwd
-function ranger {
-  local IFS=$'\t\n'
-  local tempfile="$(mktemp -t tmp.XXXXXX)"
-  local ranger_cmd=(
-    command
-    ranger
-    --cmd="map Q chain shell echo %d > "$tempfile"; quitall"
-  )
+# function ranger {
+#   local IFS=$'\t\n'
+#   local tempfile="$(mktemp -t tmp.XXXXXX)"
+#   local ranger_cmd=(
+#     command
+#     ranger
+#     --cmd="map Q chain shell echo %d > "$tempfile"; quitall"
+#   )
+# 
+#   ${ranger_cmd[@]} "$@"
+#   if [[ -f "$tempfile" ]] && [[ "$(cat -- "$tempfile")" != "$(echo -n `pwd`)" ]]; then
+#     cd -- "$(cat "$tempfile")" || return
+#   fi
+#   command rm -f -- "$tempfile" 2>/dev/null
+# }
 
-  ${ranger_cmd[@]} "$@"
-  if [[ -f "$tempfile" ]] && [[ "$(cat -- "$tempfile")" != "$(echo -n `pwd`)" ]]; then
-    cd -- "$(cat "$tempfile")" || return
-  fi
-  command rm -f -- "$tempfile" 2>/dev/null
-}
 
 # ///--- ALIASES ---///
 alias v="nvim"
 alias school="cd ~/Documents/uconn/S23/"
 alias p="python3"
 alias sp="spotify"
-alias r="ranger"
+alias r="nnn"
 
 # quick config changes
 alias kittyconfig="nvim ~/.config/kitty/kitty.conf"
@@ -131,3 +132,34 @@ alias s="kitty +kitten ssh"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# nnn on-demand cd on quit
+n() {
+    # Block nesting of nnn in subshells
+    if [[ "${NNNLVL:-0}" -ge 1 ]]; then
+        echo "nnn is already running"
+        return
+    fi
+
+    # The behaviour is set to cd on quit (nnn checks if NNN_TMPFILE is set)
+    # If NNN_TMPFILE is set to a custom path, it must be exported for nnn to
+    # see. To cd on quit only on ^G, remove the "export" and make sure not to
+    # use a custom path, i.e. set NNN_TMPFILE *exactly* as follows:
+    #     NNN_TMPFILE="${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.lastd"
+    export NNN_TMPFILE="${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.lastd"
+
+    # Unmask ^Q (, ^V etc.) (if required, see `stty -a`) to Quit nnn
+    # stty start undef
+    # stty stop undef
+    # stty lwrap undef
+    # stty lnext undef
+
+    # The backslash allows one to alias n to nnn if desired without making an
+    # infinitely recursive alias
+    \nnn "$@"
+
+    if [ -f "$NNN_TMPFILE" ]; then
+        . "$NNN_TMPFILE"
+        rm -f "$NNN_TMPFILE" > /dev/null
+    fi
+}
