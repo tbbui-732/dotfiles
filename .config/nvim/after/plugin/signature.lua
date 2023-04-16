@@ -27,12 +27,12 @@ cfg = {
     floating_window_off_x = 1, -- adjust float windows x position. 
     -- can be either a number or function
 
-    floating_window_off_y = 0, -- adjust float windows y position. e.g -2 move window up 2 lines; 2 move down 2 lines
+    floating_window_off_y = -3, -- adjust float windows y position. e.g -2 move window up 2 lines; 2 move down 2 lines
     -- can be either number or function, see examples
 
     close_timeout = 4000,     -- close floating window after __ ms when last parameter is entered
     fix_pos = false,          -- set to true, the floating window will not auto-close until finish all parameters
-    hint_enable = false,      -- virtual hint enable
+    hint_enable = true,       -- virtual hint enable
     hint_prefix = "👉 ",      -- Pointer finger for parameter
     hint_scheme = "String",
     hi_parameter = "LspSignatureActiveParameter", -- how your parameter will be highlight
