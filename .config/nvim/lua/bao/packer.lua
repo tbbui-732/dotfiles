@@ -72,29 +72,10 @@ return require('packer').startup(function(use)
     use {'lervag/vimtex'}
 
     -- Editing support
-    use {'petertriho/nvim-scrollbar'}
-
     use {"lukas-reineke/indent-blankline.nvim"}
 
     use {
-        "folke/todo-comments.nvim",
-        requires = "nvim-lua/plenary.nvim",
-        config = function()
-            require("todo-comments").setup {
-                -- your configuration comes here
-                -- or leave it empty to use the default settings
-                -- refer to the configuration section below
-            }
-        end
-    }
-
-    use {
         "ray-x/lsp_signature.nvim",
-    }
-
-    use {
-        'nvim-lualine/lualine.nvim',
-        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
 
     use {
