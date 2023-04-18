@@ -31,5 +31,5 @@ vim.opt.updatetime = 50
 -- vim.cmd('autocmd BufEnter * hi CursorLine gui=underline') -- set the current line to be underlined
 
 -- disable comment continuation
--- vim.cmd("autocmd BufEnter * set formatoptions-=cro")
--- vim.cmd("autocmd BufEnter * setlocal formatoptions-=cro")
+vim.cmd("autocmd BufEnter * set formatoptions-=cro")
+vim.cmd("autocmd BufEnter * setlocal formatoptions-=cro")
