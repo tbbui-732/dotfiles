@@ -129,38 +129,38 @@ vim.o.background = "dark"
 -- vim.cmd.colorscheme "adwaita"
 
 -- gruvbox
--- vim.cmd("let g:gruvbox_material_background = 'mix'")
--- vim.cmd("let g:gruvbox_material_better_performance = 1")
--- vim.cmd("let g:gruvbox_material_foreground = 'material'")
--- vim.cmd("let g:gruvbox_material_transparent_background = 2") -- allows other UI elements to be transparent as well
--- vim.cmd.colorscheme "gruvbox-material"
+vim.cmd("let g:gruvbox_material_background = 'mix'")
+vim.cmd("let g:gruvbox_material_better_performance = 0")
+vim.cmd("let g:gruvbox_material_foreground = 'original'")
+vim.cmd("let g:gruvbox_material_transparent_background = 2") -- allows other UI elements to be transparent as well
+vim.cmd.colorscheme "gruvbox-material"
 
 -- poimandres
 -- vim.cmd.colorscheme "poimandres"
 
 -- sonokai
-vim.cmd("let g:sonokai_transparent_background = 2")
-vim.cmd("let g:sonokai_better_performance = 0")
-vim.cmd("let g:sonokai_disable_italic_comment=1")
-vim.cmd.colorscheme "sonokai"
+--vim.cmd("let g:sonokai_transparent_background = 2")
+--vim.cmd("let g:sonokai_better_performance = 0")
+--vim.cmd("let g:sonokai_disable_italic_comment=1")
+--vim.cmd.colorscheme "sonokai"
 
 -- transparency
-local function transparent_override()
-    local highlights = {
-        "Normal",
-        "LineNr",
-        "Folded",
-        "NonText",
-        "SpecialKey",
-        "VertSplit",
-        "SignColumn",
-        "EndOfBuffer",
-        "TablineFill",
-        "HarpoonWindow",  -- harpoon plugin
-        "HarpoonBorder"
-    }
-    for _, name in pairs(highlights) do
-        vim.cmd.highlight(name .. ' guibg=none ctermbg=none')
-    end
-end
-transparent_override()
+-- local function transparent_override()
+--     local highlights = {
+--         "Normal",
+--         "LineNr",
+--         "Folded",
+--         "NonText",
+--         "SpecialKey",
+--         "VertSplit",
+--         "SignColumn",
+--         "EndOfBuffer",
+--         "TablineFill",
+--         "HarpoonWindow",  -- harpoon plugin
+--         "HarpoonBorder"
+--     }
+--     for _, name in pairs(highlights) do
+--         vim.cmd.highlight(name .. ' guibg=none ctermbg=none')
+--     end
+-- end
+-- transparent_override()
