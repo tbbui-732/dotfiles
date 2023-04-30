@@ -130,9 +130,9 @@ vim.o.background = "dark"
 
 -- gruvbox
 vim.cmd("let g:gruvbox_material_background = 'mix'")
-vim.cmd("let g:gruvbox_material_better_performance = 0")
+vim.cmd("let g:gruvbox_material_better_performance = 1")
 vim.cmd("let g:gruvbox_material_foreground = 'original'")
-vim.cmd("let g:gruvbox_material_transparent_background = 2") -- allows other UI elements to be transparent as well
+vim.cmd("let g:gruvbox_material_transparent_background = 1") -- allows other UI elements to be transparent as well
 vim.cmd.colorscheme "gruvbox-material"
 
 -- poimandres
