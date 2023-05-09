@@ -6,9 +6,6 @@
 export ZSH="$HOME/.oh-my-zsh"
 
 # ///--- THEME ---///
-# ZSH_THEME="gnzh"
-# ZSH_THEME="minimal"
-
 # User configuration (for pure...)
 ZSH_THEME=""
 fpath+=("$(brew --prefix)/share/zsh/site-functions")
