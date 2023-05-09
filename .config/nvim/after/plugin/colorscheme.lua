@@ -15,7 +15,7 @@ vim.cmd.colorscheme "poimandres"
 vim.api.nvim_set_hl(0, "TelescopeSelection", { bg = "#42675A" })
 vim.api.nvim_set_hl(0, "TelescopeSelectionCaret", { bg = "#42675A" })
 vim.api.nvim_set_hl(0, "TelescopeBorder", { bg = "#1E1E1E" }) -- Same as Farin background
-vim.api.nvim_set_hl(0, "TelescopeTitle", { bg = "#000000" })
+vim.api.nvim_set_hl(0, "TelescopeTitle", { bg = "#1E1E1E" })
 
 -- sonokai
 --vim.cmd("let g:sonokai_style='default'")
