@@ -13,7 +13,7 @@ vim.opt.expandtab = true
 
 vim.opt.smartindent = true
 
-vim.opt.wrap = true
+vim.opt.wrap = false
 vim.opt.linebreak = true
 
 vim.opt.hlsearch = true
@@ -36,4 +36,4 @@ vim.cmd("autocmd BufEnter * setlocal formatoptions-=cro")
 
 -- netrw settings
 vim.cmd("let g:netrw_banner=0")
-vim.cmd("let g:netrw_liststyle=3")
+vim.cmd("let g:netrw_liststyle=0")
