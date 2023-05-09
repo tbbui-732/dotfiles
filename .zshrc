@@ -69,9 +69,9 @@ export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='nvim'
+    export EDITOR='nvim'
 else
-  export EDITOR='vim'
+    export EDITOR='vim'
 fi
 
 # Compilation flags
@@ -98,7 +98,7 @@ fi
 
 # ///--- ALIASES ---///
 alias v="nvim"
-alias school="cd ~/Documents/uconn/S23/"
+alias school="cd ~/Documents/UConn/"
 alias p="python3"
 alias sp="spotify"
 
@@ -110,7 +110,7 @@ alias nvimconfigs="cd ~/.config/nvim/lua/bao/"
 # alias ls="exa"
 # alias ll="exa -alh"
 # alias tree="exa --tree"
-# alias cat="bat"
+alias cat="bat"
 
 # git
 alias gap="git add --patch"

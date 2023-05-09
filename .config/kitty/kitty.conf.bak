@@ -4,22 +4,12 @@ bold_font            JetBrains Mono Bold
 italic_font          JetBrains Mono Italic
 bold_italic_font     JetBrains Mono Bold Italic
 
-# font_family         Hack Regular
-# bold_font           Hack Bold
-# italic_font         Hack Italic
-# bold_italic_font    Hack Bold Italic
-
-# font_family         Victor Mono Regular
-# bold_font           Victor Mono Bold
-# italic_font         Victor Mono Italic
-# bold_italic_font    Victor Mono Bold Italic
-
-font_size 16.0
+font_size 20.0
 disable_ligatures always
 scrollback_lines 500
 sync_to_monitor no
 macos_quit_when_last_window_closed yes
-# hide_window_decorations titlebar-only
+#hide_window_decorations titlebar-only
 hide_window_decorations no
 
 background_opacity 1.00
@@ -39,10 +29,10 @@ cursor_blink_interval 0
 # tab bar adjustments
 tab_bar_edge top
 tab_bar_style powerline
-tab_powerline_style angled
+tab_powerline_style round
 tab_bar_min_tabs 2
 
 # BEGIN_KITTY_THEME
-# 3024 Night
+# Gruvbox Material Dark Soft
 include current-theme.conf
 # END_KITTY_THEME
