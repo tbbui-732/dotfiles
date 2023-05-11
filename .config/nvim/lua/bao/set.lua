@@ -1,6 +1,9 @@
 -- uncomment if you only want block cursor
---vim.opt.guicursor = ""
-vim.opt.guicursor = "n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20"
+vim.opt.guicursor = ""
+
+-- uncomment if you want normal cursor
+--vim.opt.guicursor = "n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20"
+
 vim.opt.cursorline = true
 
 vim.opt.nu = true
@@ -13,7 +16,7 @@ vim.opt.expandtab = true
 
 vim.opt.smartindent = true
 
-vim.opt.wrap = false
+vim.opt.wrap = true
 vim.opt.linebreak = true
 
 vim.opt.hlsearch = true

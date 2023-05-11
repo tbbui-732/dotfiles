@@ -1,0 +1,41 @@
+# Open kitty terminal
+alt - return : /Applications/kitty.app/Contents/MacOS/kitty --single-instance -d ~
+
+# -- Focus window -- 
+# (vim bindings)
+alt - h : yabai -m window --focus west
+alt - j : yabai -m window --focus south
+alt - k : yabai -m window --focus north
+alt - l : yabai -m window --focus east
+
+# (arrow bindings)
+alt - left  : yabai -m window --focus west
+alt - down  : yabai -m window --focus south
+alt - up    : yabai -m window --focus north
+alt - right : yabai -m window --focus east
+
+# -- Swap windows --
+# (vim bindings)
+shift + alt - h : yabai -m window --swap west
+shift + alt - j : yabai -m window --swap south
+shift + alt - k : yabai -m window --swap north
+shift + alt - l : yabai -m window --swap east
+
+# (arrow bindings)
+shift + alt - left  : yabai -m window --swap west
+shift + alt - down  : yabai -m window --swap south
+shift + alt - up    : yabai -m window --swap north
+shift + alt - right : yabai -m window --swap east
+
+# -- Move focus container to workspace --
+shift + alt - 1 : yabai -m window --space 1;
+shift + alt - 2 : yabai -m window --space 2;
+shift + alt - 3 : yabai -m window --space 3;
+shift + alt - 4 : yabai -m window --space 4;
+shift + alt - 5 : yabai -m window --space 5;
+
+# -- Balance size of windows --
+cmd - e : yabai -m space --balance
+
+# -- Toggle native fullscreen --
+shift + cmd - f : yabai -m window --toggle native-fullscreen
