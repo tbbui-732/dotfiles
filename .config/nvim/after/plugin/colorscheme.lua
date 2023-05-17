@@ -14,8 +14,8 @@ vim.cmd.colorscheme "poimandres"
 -- telescope highlighting settings
 vim.api.nvim_set_hl(0, "TelescopeSelection", { bg = "#42675A" })
 vim.api.nvim_set_hl(0, "TelescopeSelectionCaret", { bg = "#42675A" })
-vim.api.nvim_set_hl(0, "TelescopeBorder", { bg = "#1E1E1E" }) -- Same as Farin background
-vim.api.nvim_set_hl(0, "TelescopeTitle", { bg = "#1E1E1E" })
+vim.api.nvim_set_hl(0, "TelescopeBorder", { bg = "#222436" }) -- Same as Tokyo night background
+vim.api.nvim_set_hl(0, "TelescopeTitle", { bg = "#222436" })
 
 -- sonokai
 --vim.cmd("let g:sonokai_style='default'")
