@@ -85,9 +85,9 @@ alias kittyconfig="nvim ~/.config/kitty/kitty.conf"
 alias nvimconfigs="cd ~/.config/nvim/lua/bao/"
 
 # file exploring
-# alias ls="exa"
-# alias ll="exa -alh"
-# alias tree="exa --tree"
+alias ls="exa"
+alias ll="exa -alh"
+alias tree="exa --tree"
 alias cat="bat"
 
 # git
