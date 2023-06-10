@@ -29,6 +29,8 @@ return require('packer').startup(function(use)
     use {'sainnhe/gruvbox-material'}
     use {'sainnhe/sonokai'}
     use {'olivercederborg/poimandres.nvim'}
+    use {'maxmx03/fluoromachine.nvim'}
+
 
     -- Language Server
     use {

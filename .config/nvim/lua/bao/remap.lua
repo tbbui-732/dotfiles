@@ -19,4 +19,4 @@ end, {expr = true, noremap = true})
 vim.keymap.set('n', '<leader>ef', ':Ex<CR>');
 
 -- Escape alternative
-vim.keymap.set('i', 'jk', '<Esc>');
+-- vim.keymap.set('i', 'jk', '<Esc>');
