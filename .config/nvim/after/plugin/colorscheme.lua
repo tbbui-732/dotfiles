@@ -18,6 +18,7 @@ require('fluoromachine').setup {
     ['@field'] =    { italic = true },
     ['@parameter'] = { italic = true },
   },
+  brightness = 0.03,
 }
 vim.cmd.colorscheme "fluoromachine"
 
@@ -31,21 +32,21 @@ vim.cmd.colorscheme "fluoromachine"
 
 -- transparency
 -- local function transparent_override()
---     local highlights = {
---         "Normal",
---         "LineNr",
---         "Folded",
---         "NonText",
---         "SpecialKey",
---         "VertSplit",
---         "SignColumn",
---         "EndOfBuffer",
---         "TablineFill",
---         "HarpoonWindow",  -- harpoon plugin
---         "HarpoonBorder"
---     }
---     for _, name in pairs(highlights) do
---         vim.cmd.highlight(name .. ' guibg=none ctermbg=none')
---     end
--- end
--- transparent_override()
+  --     local highlights = {
+    --         "Normal",
+    --         "LineNr",
+    --         "Folded",
+    --         "NonText",
+    --         "SpecialKey",
+    --         "VertSplit",
+    --         "SignColumn",
+    --         "EndOfBuffer",
+    --         "TablineFill",
+    --         "HarpoonWindow",  -- harpoon plugin
+    --         "HarpoonBorder"
+    --     }
+    --     for _, name in pairs(highlights) do
+    --         vim.cmd.highlight(name .. ' guibg=none ctermbg=none')
+    --     end
+    -- end
+    -- transparent_override()
