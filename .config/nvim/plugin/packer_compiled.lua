@@ -79,11 +79,6 @@ _G.packer_plugins = {
     path = "/Users/brian-bui/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
-  ["adwaita.nvim"] = {
-    loaded = true,
-    path = "/Users/brian-bui/.local/share/nvim/site/pack/packer/start/adwaita.nvim",
-    url = "https://github.com/Mofiqul/adwaita.nvim"
-  },
   catppuccin = {
     loaded = true,
     path = "/Users/brian-bui/.local/share/nvim/site/pack/packer/start/catppuccin",
@@ -113,16 +108,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/brian-bui/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
-  },
-  ["dracula.nvim"] = {
-    loaded = true,
-    path = "/Users/brian-bui/.local/share/nvim/site/pack/packer/start/dracula.nvim",
-    url = "https://github.com/Mofiqul/dracula.nvim"
-  },
-  ["fluoromachine.nvim"] = {
-    loaded = true,
-    path = "/Users/brian-bui/.local/share/nvim/site/pack/packer/start/fluoromachine.nvim",
-    url = "https://github.com/maxmx03/fluoromachine.nvim"
   },
   ["friendly-snippets"] = {
     loaded = true,
@@ -185,15 +170,19 @@ _G.packer_plugins = {
     path = "/Users/brian-bui/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
+  ["nvim-tree.lua"] = {
+    loaded = true,
+    path = "/Users/brian-bui/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
+    url = "https://github.com/nvim-tree/nvim-tree.lua"
+  },
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/Users/brian-bui/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
   ["nvim-web-devicons"] = {
-    loaded = false,
-    needs_bufread = false,
-    path = "/Users/brian-bui/.local/share/nvim/site/pack/packer/opt/nvim-web-devicons",
+    loaded = true,
+    path = "/Users/brian-bui/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
   ["packer.nvim"] = {
@@ -225,11 +214,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/brian-bui/.local/share/nvim/site/pack/packer/start/vimtex",
     url = "https://github.com/lervag/vimtex"
-  },
-  ["vscode.nvim"] = {
-    loaded = true,
-    path = "/Users/brian-bui/.local/share/nvim/site/pack/packer/start/vscode.nvim",
-    url = "https://github.com/Mofiqul/vscode.nvim"
   }
 }
 
