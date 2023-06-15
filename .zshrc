@@ -71,10 +71,49 @@ else
     export EDITOR='vim'
 fi
 
+# ///--- PATH ---///
+# grep
+if [ -d "$(brew --prefix)/opt/grep/libexec/gnubin" ]; then
+  PATH="$(brew --prefix)/opt/grep/libexec/gnubin:$PATH"
+fi
+
+# doom emacs
+path+="$HOME/.emacs.d/bin"
+
+# brew formulaes
+export CPATH=/opt/homebrew/include
+export LIBRARY_PATH=/opt/homebrew/lib
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
 # ///--- ALIASES ---///
+# nnn on-demand cd on quit
+# aliased r to open nnn
+r() {
+    # Block nesting of nnn in subshells
+    if [[ "${NNNLVL:-0}" -ge 1 ]]; then
+        echo "nnn is already running"
+        return
+    fi
+
+    # The behaviour is set to cd on quit (nnn checks if NNN_TMPFILE is set)
+    # If NNN_TMPFILE is set to a custom path, it must be exported for nnn to
+    # see. To cd on quit only on ^G, remove the "export" and make sure not to
+    # use a custom path, i.e. set NNN_TMPFILE *exactly* as follows:
+    #     NNN_TMPFILE="${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.lastd"
+    export NNN_TMPFILE="${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.lastd"
+
+    # The backslash allows one to alias r to nnn if desired without making an
+    # infinitely recursive alias
+    \nnn "$@"
+
+    if [ -f "$NNN_TMPFILE" ]; then
+        . "$NNN_TMPFILE"
+        rm -f "$NNN_TMPFILE" > /dev/null
+    fi
+}
+
 alias v="nvim"
 alias school="cd ~/Documents/UConn/"
 alias p="python3"
@@ -98,46 +137,14 @@ alias gp="git push"
 alias gpu="git pull"
 alias gck="git checkout"
 
-# Setting the paths for brew formulaes
-export CPATH=/opt/homebrew/include
-export LIBRARY_PATH=/opt/homebrew/lib
-
 # ssh settings
 alias s="kitty +kitten ssh"
+
+# emacs
+alias emacs="emacsclient -c -a 'emacs'"
 
 # Nvm settings
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# nnn on-demand cd on quit
-# aliased r to open nnn
-r() {
-    # Block nesting of nnn in subshells
-    if [[ "${NNNLVL:-0}" -ge 1 ]]; then
-        echo "nnn is already running"
-        return
-    fi
-
-    # The behaviour is set to cd on quit (nnn checks if NNN_TMPFILE is set)
-    # If NNN_TMPFILE is set to a custom path, it must be exported for nnn to
-    # see. To cd on quit only on ^G, remove the "export" and make sure not to
-    # use a custom path, i.e. set NNN_TMPFILE *exactly* as follows:
-    #     NNN_TMPFILE="${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.lastd"
-    export NNN_TMPFILE="${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.lastd"
-
-    # Unmask ^Q (, ^V etc.) (if required, see `stty -a`) to Quit nnn
-    # stty start undef
-    # stty stop undef
-    # stty lwrap undef
-    # stty lnext undef
-
-    # The backslash allows one to alias r to nnn if desired without making an
-    # infinitely recursive alias
-    \nnn "$@"
-
-    if [ -f "$NNN_TMPFILE" ]; then
-        . "$NNN_TMPFILE"
-        rm -f "$NNN_TMPFILE" > /dev/null
-    fi
-}
