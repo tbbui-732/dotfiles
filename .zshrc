@@ -141,7 +141,7 @@ alias gck="git checkout"
 alias s="kitty +kitten ssh"
 
 # emacs
-alias emacs="emacsclient -c -a 'emacs'"
+# alias emacs="emacsclient -c -a 'emacs'"
 
 # Nvm settings
 export NVM_DIR="$HOME/.nvm"

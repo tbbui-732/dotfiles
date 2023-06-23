@@ -26,6 +26,7 @@ return require('packer').startup(function(use)
   use {'sainnhe/gruvbox-material'}
   use {'sainnhe/sonokai'}
   use {'olivercederborg/poimandres.nvim'}
+  use {'ishan9299/modus-theme-vim'}
 
   -- Language Server
   use {
@@ -54,13 +55,13 @@ return require('packer').startup(function(use)
   use {'lervag/vimtex'}
 
   -- Editing support
-  use {
-    'nvim-tree/nvim-tree.lua',
-    requires = {
-      'nvim-tree/nvim-web-devicons',
-    },
-  }
-  use {'lukas-reineke/indent-blankline.nvim'}
+  --use {
+  --  'nvim-tree/nvim-tree.lua',
+  --  requires = {
+  --    'nvim-tree/nvim-web-devicons',
+  --  },
+  --}
+  -- use {'lukas-reineke/indent-blankline.nvim'}
   use {'ray-x/lsp_signature.nvim'}
   use {
     'windwp/nvim-autopairs',

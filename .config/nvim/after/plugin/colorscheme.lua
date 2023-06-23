@@ -30,22 +30,26 @@ vim.o.background = "dark"
 -- vim.cmd.colorscheme "sonokai"
 
 -- Poimandres
-require('poimandres').setup {
-  bold_vert_split = false, -- use bold vertical separators
-  dim_nc_background = true, -- dim 'non-current' window backgrounds
-  disable_background = false, -- disable background
-  disable_float_background = false, -- disable background for floats
-  disable_italics = false, -- disable italics
-}
-vim.cmd.colorscheme 'poimandres'
+--require('poimandres').setup {
+--  bold_vert_split = false, -- use bold vertical separators
+--  dim_nc_background = true, -- dim 'non-current' window backgrounds
+--  disable_background = false, -- disable background
+--  disable_float_background = false, -- disable background for floats
+--  disable_italics = false, -- disable italics
+--}
+--vim.cmd.colorscheme 'poimandres'
 
--- telescope highlighting settings
-local light_green = "#42675A"
-local sonokai_bg = "#212327"
-vim.api.nvim_set_hl(0, "TelescopeSelection",      { bg = light_green })
-vim.api.nvim_set_hl(0, "TelescopeSelectionCaret", { bg = light_green })
-vim.api.nvim_set_hl(0, "TelescopeBorder", { bg = sonokai_bg })
-vim.api.nvim_set_hl(0, "TelescopeTitle",  { bg = sonokai_bg })
+-- telescope highlighting settings (poimandres requires this)
+--local light_green = "#42675A"
+--local sonokai_bg = "#212327"
+--vim.api.nvim_set_hl(0, "TelescopeSelection",      { bg = light_green })
+--vim.api.nvim_set_hl(0, "TelescopeSelectionCaret", { bg = light_green })
+--vim.api.nvim_set_hl(0, "TelescopeBorder", { bg = sonokai_bg })
+--vim.api.nvim_set_hl(0, "TelescopeTitle",  { bg = sonokai_bg })
+
+-- modus (emacs-like)
+vim.cmd.colorscheme 'modus-vivendi' -- dark
+--vim.cmd.colorscheme 'modus-operandi'-- light
 
 -- transparency
 -- local function transparent_override()

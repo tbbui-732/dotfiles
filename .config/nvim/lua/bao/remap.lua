@@ -15,6 +15,9 @@ vim.keymap.set('n', 'j', function()
   return 'j'
 end, {expr = true, noremap = true})
 
--- Nvim tree keybindings
-vim.keymap.set('n', '<leader>ef', ':NvimTreeToggle<CR>');
-vim.keymap.set('n', '<leader>fe', ':NvimTreeClose<CR>');
+-- -- Nvim tree keybindings
+-- vim.keymap.set('n', '<leader>ef', ':NvimTreeToggle<CR>');
+-- vim.keymap.set('n', '<leader>fe', ':NvimTreeClose<CR>');
+
+-- Netrw keybindings
+vim.keymap.set('n', '<leader>ef', ':Ex<CR>');
