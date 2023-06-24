@@ -1,6 +1,6 @@
 if vim.g.neovide then
-  vim.g.transparency = 0.8
-  vim.g.neovide_transparency = 0.7
+  vim.g.transparency = 1.0
+  vim.g.neovide_transparency = 1.0
 end
 
 -- set leader key to space

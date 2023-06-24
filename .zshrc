@@ -115,6 +115,7 @@ r() {
 }
 
 alias v="nvim"
+alias nv="neovide"
 alias school="cd ~/Documents/UConn/"
 alias p="python3"
 alias sp="spotify"
