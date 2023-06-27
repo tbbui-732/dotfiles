@@ -55,13 +55,7 @@ return require('packer').startup(function(use)
   use {'lervag/vimtex'}
 
   -- Editing support
-  --use {
-  --  'nvim-tree/nvim-tree.lua',
-  --  requires = {
-  --    'nvim-tree/nvim-web-devicons',
-  --  },
-  --}
-  -- use {'lukas-reineke/indent-blankline.nvim'}
+  use {'lukas-reineke/indent-blankline.nvim'}
   use {'ray-x/lsp_signature.nvim'}
   use {
     'windwp/nvim-autopairs',
