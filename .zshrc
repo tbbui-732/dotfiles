@@ -77,9 +77,6 @@ if [ -d "$(brew --prefix)/opt/grep/libexec/gnubin" ]; then
   PATH="$(brew --prefix)/opt/grep/libexec/gnubin:$PATH"
 fi
 
-# doom emacs
-path+="$HOME/.emacs.d/bin"
-
 # brew formulaes
 export CPATH=/opt/homebrew/include
 export LIBRARY_PATH=/opt/homebrew/lib
@@ -115,7 +112,6 @@ r() {
 }
 
 alias v="nvim"
-alias nv="neovide"
 alias school="cd ~/Documents/UConn/"
 alias p="python3"
 alias sp="spotify"
@@ -140,9 +136,6 @@ alias gck="git checkout"
 
 # ssh settings
 alias s="kitty +kitten ssh"
-
-# emacs
-# alias emacs="emacsclient -c -a 'emacs'"
 
 # Nvm settings
 export NVM_DIR="$HOME/.nvm"

@@ -1,8 +1,8 @@
 -- uncomment if you only want block cursor
-vim.opt.guicursor = ""
+--vim.opt.guicursor = ""
 
 -- uncomment if you want normal cursor
---vim.opt.guicursor = "n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20"
+vim.opt.guicursor = "n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20"
 
 vim.opt.cursorline = true
 
@@ -38,5 +38,5 @@ vim.cmd("autocmd BufEnter * set formatoptions-=cro")
 vim.cmd("autocmd BufEnter * setlocal formatoptions-=cro")
 
 -- netrw settings
---vim.cmd("let g:netrw_banner=0")
---vim.cmd("let g:netrw_liststyle=0")
+vim.cmd("let g:netrw_banner=0")
+vim.cmd("let g:netrw_liststyle=0")
