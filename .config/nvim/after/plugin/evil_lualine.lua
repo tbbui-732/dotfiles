@@ -4,19 +4,20 @@
 local lualine = require('lualine')
 
 -- Color table for highlights
--- stylua: ignore
+-- In the style of 'Modus Vivendi'
 local colors = {
-  bg       = '#202328',
-  fg       = '#bbc2cf',
-  yellow   = '#ECBE7B',
-  cyan     = '#008080',
-  darkblue = '#081633',
-  green    = '#98be65',
-  orange   = '#FF8800',
-  violet   = '#a9a1e1',
-  magenta  = '#c678dd',
-  blue     = '#51afef',
-  red      = '#ec5f67',
+  --bg = '#1a1a1a',
+  bg = '#242424',
+  fg = '#f0f0f0',
+  yellow = '#dca432',
+  cyan = '#16afca',
+  darkblue = '#1e90ff',
+  green = '#98be65',
+  orange = '#e89393',
+  violet = '#c678dd',
+  magenta = '#ff80ff',
+  blue = '#78a4ff',
+  red = '#ec5f67',
 }
 
 local conditions = {
@@ -82,43 +83,44 @@ ins_left {
   function()
     return '▊'
   end,
-  color = { fg = colors.blue }, -- Sets highlighting of component
+  color = { fg = colors.cyan }, -- Sets highlighting of component
   padding = { left = 0, right = 1 }, -- We don't need space before this
 }
 
-ins_left {
-  -- mode component
-  function()
-    return 'mode'
-  end,
-  color = function()
-    -- auto change color according to neovims mode
-    local mode_color = {
-      n = colors.red,
-      i = colors.green,
-      v = colors.blue,
-      [''] = colors.blue,
-      V = colors.blue,
-      c = colors.magenta,
-      no = colors.red,
-      s = colors.orange,
-      S = colors.orange,
-      [''] = colors.orange,
-      ic = colors.yellow,
-      R = colors.violet,
-      Rv = colors.violet,
-      cv = colors.red,
-      ce = colors.red,
-      r = colors.cyan,
-      rm = colors.cyan,
-      ['r?'] = colors.cyan,
-      ['!'] = colors.red,
-      t = colors.red,
-    }
-    return { fg = mode_color[vim.fn.mode()] }
-  end,
-  padding = { right = 1 },
-}
+-- ins_left {
+--   -- mode component
+--   function()
+--     return ''
+--   end,
+--   color = function()
+--     -- auto change color according to neovims mode
+--     local mode_color = {
+--       --changing
+--       n = colors.blue, -- normal
+--       i = colors.green, -- insert
+--       v = colors.magenta,  -- visual 
+--       [''] = colors.blue, -- visual block
+--       V = colors.cyan, -- visual line
+--       c = colors.magenta,
+--       no = colors.red,
+--       s = colors.orange,
+--       S = colors.orange,
+--       [''] = colors.orange,
+--       ic = colors.yellow,
+--       R = colors.violet,
+--       Rv = colors.violet,
+--       cv = colors.red,
+--       ce = colors.red,
+--       r = colors.cyan,
+--       rm = colors.cyan,
+--       ['r?'] = colors.cyan,
+--       ['!'] = colors.red,
+--       t = colors.red,
+--     }
+--     return { fg = mode_color[vim.fn.mode()] }
+--   end,
+--   padding = { right = 1 },
+-- }
 
 ins_left {
   -- filesize component
@@ -134,7 +136,7 @@ ins_left {
 
 ins_left { 'location' }
 
-ins_left { 'progress', color = { fg = colors.fg, gui = 'bold' } }
+ins_left { 'progress', color = { fg = colors.fg } }
 
 ins_left {
   'diagnostics',
@@ -158,7 +160,7 @@ ins_left {
 ins_left {
   -- Lsp server name .
   function()
-    local msg = 'No Active Lsp'
+    local msg = 'no active lsp'
     local buf_ft = vim.api.nvim_buf_get_option(0, 'filetype')
     local clients = vim.lsp.get_active_clients()
     if next(clients) == nil then
@@ -172,29 +174,29 @@ ins_left {
     end
     return msg
   end,
-  icon = 'language server:',
-  color = { fg = '#ffffff', gui = 'bold' },
+  icon = 'lang:',
+  color = { fg = '#ffffff' },
 }
 
 -- Add components to right sections
-ins_right {
-  'o:encoding', -- option component same as &encoding in viml
-  fmt = string.lower, -- I'm not sure why it's upper case either ;)
-  cond = conditions.hide_in_width,
-  color = { fg = colors.green, gui = 'bold' },
-}
-
-ins_right {
-  'fileformat',
-  fmt = string.lower,
-  icons_enabled = false, -- I think icons are cool but Eviline doesn't have them. sigh
-  color = { fg = colors.green, gui = 'bold' },
-}
+-- ins_right {
+--   'o:encoding', -- option component same as &encoding in viml
+--   fmt = string.lower,
+--   cond = conditions.hide_in_width,
+--   color = { fg = colors.green, gui = 'bold' },
+-- }
+-- 
+-- ins_right {
+--   'fileformat',
+--   fmt = string.lower,
+--   icons_enabled = false, -- I think icons are cool but Eviline doesn't have them. sigh
+--   color = { fg = colors.green, gui = 'bold' },
+-- }
 
 ins_right {
   'branch',
-  icon = 'branch:',
-  color = { fg = colors.violet, gui = 'bold' },
+  icon = '',
+  color = { fg = colors.magenta },
 }
 
 ins_right {
@@ -203,7 +205,7 @@ ins_right {
   symbols = { added = ' ', modified = '󰝤 ', removed = ' ' },
   diff_color = {
     added = { fg = colors.green },
-    modified = { fg = colors.orange },
+    modified = { fg = colors.yellow },
     removed = { fg = colors.red },
   },
   cond = conditions.hide_in_width,
@@ -213,7 +215,7 @@ ins_right {
   function()
     return '▊'
   end,
-  color = { fg = colors.blue },
+  color = { fg = colors.cyan },
   padding = { left = 1 },
 }
 

@@ -201,6 +201,11 @@ _G.packer_plugins = {
     path = "/Users/brian-bui/.local/share/nvim/site/pack/packer/start/poimandres.nvim",
     url = "https://github.com/olivercederborg/poimandres.nvim"
   },
+  ["rust.vim"] = {
+    loaded = true,
+    path = "/Users/brian-bui/.local/share/nvim/site/pack/packer/start/rust.vim",
+    url = "https://github.com/rust-lang/rust.vim"
+  },
   sonokai = {
     loaded = true,
     path = "/Users/brian-bui/.local/share/nvim/site/pack/packer/start/sonokai",

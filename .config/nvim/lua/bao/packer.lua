@@ -51,6 +51,9 @@ return require('packer').startup(function(use)
     }
   }
 
+  -- Rust
+  use {'rust-lang/rust.vim'}
+
   -- LaTex
   use {'lervag/vimtex'}
 
