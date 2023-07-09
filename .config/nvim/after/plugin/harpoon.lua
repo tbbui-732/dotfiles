@@ -3,8 +3,8 @@ local ui = require("harpoon.ui")
 
 -- Marking
 vim.keymap.set("n", "<leader>a", function ()
-    print("> (!) Marked current file with harpoon")
-    mark.add_file()
+        print("> (!) Marked current file with harpoon")
+        mark.add_file()
 end)
 vim.keymap.set("n", "<C-m>", ui.toggle_quick_menu)
 
