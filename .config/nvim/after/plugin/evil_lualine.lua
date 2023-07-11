@@ -6,9 +6,8 @@ local lualine = require('lualine')
 -- Color table for highlights
 -- In the style of 'Modus Vivendi'
 local colors = {
-    -- bg = '#1a1a1a',
+    bg = '1a1a1a',
     -- bg = '#242424',
-    bg = '000000',
     fg = '#f0f0f0',
     yellow = '#dca432',
     cyan = '#16afca',
@@ -80,48 +79,48 @@ local function ins_right(component)
     table.insert(config.sections.lualine_x, component)
 end
 
--- ins_left {
---     function()
---         return '▊'
---     end,
---     color = { fg = colors.cyan }, -- Sets highlighting of component
---     padding = { left = 0, right = 1 }, -- We don't need space before this
--- }
+ins_left {
+    function()
+        return '▊'
+    end,
+    color = { fg = colors.cyan }, -- Sets highlighting of component
+    padding = { left = 0, right = 1 }, -- We don't need space before this
+}
 
--- ins_left {
---   -- mode component
---   function()
---     return ''
---   end,
---   color = function()
---     -- auto change color according to neovims mode
---     local mode_color = {
---       --changing
---       n = colors.blue, -- normal
---       i = colors.green, -- insert
---       v = colors.magenta,  -- visual 
---       [''] = colors.blue, -- visual block
---       V = colors.cyan, -- visual line
---       c = colors.magenta,
---       no = colors.red,
---       s = colors.orange,
---       S = colors.orange,
---       [''] = colors.orange,
---       ic = colors.yellow,
---       R = colors.violet,
---       Rv = colors.violet,
---       cv = colors.red,
---       ce = colors.red,
---       r = colors.cyan,
---       rm = colors.cyan,
---       ['r?'] = colors.cyan,
---       ['!'] = colors.red,
---       t = colors.red,
---     }
---     return { fg = mode_color[vim.fn.mode()] }
---   end,
---   padding = { right = 1 },
--- }
+ins_left {
+    -- mode component
+    function()
+        return ''
+    end,
+    color = function()
+        -- auto change color according to neovims mode
+        local mode_color = {
+            --changing
+            n = colors.white, -- normal
+            i = colors.magenta, -- insert
+            v = colors.green,  -- visual 
+            [''] = colors.red, -- visual block
+            V = colors.cyan, -- visual line
+            c = colors.magenta,
+            no = colors.red,
+            s = colors.orange,
+            S = colors.orange,
+            [''] = colors.orange,
+            ic = colors.yellow,
+            R = colors.violet,
+            Rv = colors.violet,
+            cv = colors.red,
+            ce = colors.red,
+            r = colors.cyan,
+            rm = colors.cyan,
+            ['r?'] = colors.cyan,
+            ['!'] = colors.red,
+            t = colors.red,
+        }
+        return { fg = mode_color[vim.fn.mode()] }
+    end,
+    padding = { right = 1 },
+}
 
 ins_left {
     -- filesize component
@@ -212,13 +211,13 @@ ins_right {
     cond = conditions.hide_in_width,
 }
 
--- ins_right {
---     function()
---         return '▊'
---     end,
---     color = { fg = colors.cyan },
---     padding = { left = 1 },
--- }
+ins_right {
+    function()
+        return '▊'
+    end,
+    color = { fg = colors.cyan },
+    padding = { left = 1 },
+}
 
 -- Now don't forget to initialize lualine
 lualine.setup(config)
