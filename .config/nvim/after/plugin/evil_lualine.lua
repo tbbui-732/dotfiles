@@ -6,8 +6,9 @@ local lualine = require('lualine')
 -- Color table for highlights
 -- In the style of 'Modus Vivendi'
 local colors = {
-    --bg = '#1a1a1a',
-    bg = '#242424',
+    -- bg = '#1a1a1a',
+    -- bg = '#242424',
+    bg = '000000',
     fg = '#f0f0f0',
     yellow = '#dca432',
     cyan = '#16afca',
@@ -79,13 +80,13 @@ local function ins_right(component)
     table.insert(config.sections.lualine_x, component)
 end
 
-ins_left {
-    function()
-        return '▊'
-    end,
-    color = { fg = colors.cyan }, -- Sets highlighting of component
-    padding = { left = 0, right = 1 }, -- We don't need space before this
-}
+-- ins_left {
+--     function()
+--         return '▊'
+--     end,
+--     color = { fg = colors.cyan }, -- Sets highlighting of component
+--     padding = { left = 0, right = 1 }, -- We don't need space before this
+-- }
 
 -- ins_left {
 --   -- mode component
@@ -196,7 +197,7 @@ ins_left {
 ins_right {
     'branch',
     icon = '',
-    color = { fg = colors.magenta },
+    color = { fg = colors.blue },
 }
 
 ins_right {
@@ -211,13 +212,13 @@ ins_right {
     cond = conditions.hide_in_width,
 }
 
-ins_right {
-    function()
-        return '▊'
-    end,
-    color = { fg = colors.cyan },
-    padding = { left = 1 },
-}
+-- ins_right {
+--     function()
+--         return '▊'
+--     end,
+--     color = { fg = colors.cyan },
+--     padding = { left = 1 },
+-- }
 
 -- Now don't forget to initialize lualine
 lualine.setup(config)
