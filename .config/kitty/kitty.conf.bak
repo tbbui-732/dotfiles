@@ -41,6 +41,6 @@ tab_powerline_style angled
 tab_bar_min_tabs 2
 
 # BEGIN_KITTY_THEME
-# Gruvbox Material Dark Hard
+# Modus Operandi
 include current-theme.conf
 # END_KITTY_THEME
