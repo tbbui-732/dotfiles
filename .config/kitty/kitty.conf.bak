@@ -9,7 +9,7 @@ bold_font            Liga SFMono Nerd Font Bold
 italic_font          Liga SFMono Nerd Font Italic
 bold_italic_font     Liga SFMono Nerd Font Bold Italic
 
-font_size 20.0
+font_size 16.0
 disable_ligatures always
 scrollback_lines 1000
 sync_to_monitor no
@@ -41,6 +41,6 @@ tab_powerline_style angled
 tab_bar_min_tabs 2
 
 # BEGIN_KITTY_THEME
-# Modus Vivendi
+# Gruvbox Material Dark Hard
 include current-theme.conf
 # END_KITTY_THEME

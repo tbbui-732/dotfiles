@@ -85,11 +85,6 @@ _G.packer_plugins = {
     path = "/Users/brian-bui/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
-  ["barbar.nvim"] = {
-    loaded = true,
-    path = "/Users/brian-bui/.local/share/nvim/site/pack/packer/start/barbar.nvim",
-    url = "https://github.com/romgrk/barbar.nvim"
-  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/Users/brian-bui/.local/share/nvim/site/pack/packer/start/cmp-buffer",
