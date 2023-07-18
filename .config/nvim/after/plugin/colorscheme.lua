@@ -14,22 +14,22 @@ vim.cmd.colorscheme 'modus-vivendi' -- dark
 -- vim.cmd.colorscheme 'gruvbox-material'
 
 -- transparency
--- local function transparent_override()
---     local highlights = {
---         "Normal",
---         "LineNr",
---         "Folded",
---         "NonText",
---         "SpecialKey",
---         "VertSplit",
---         "SignColumn",
---         "EndOfBuffer",
---         "TablineFill",
---         "HarpoonWindow",  -- harpoon plugin
---         "HarpoonBorder"
---     }
---     for _, name in pairs(highlights) do
---         vim.cmd.highlight(name .. ' guibg=none ctermbg=none')
---     end
--- end
--- transparent_override()
+local function transparent_override()
+  local highlights = {
+    "Normal",
+    "LineNr",
+    "Folded",
+    "NonText",
+    "SpecialKey",
+    "VertSplit",
+    "SignColumn",
+    "EndOfBuffer",
+    "TablineFill",
+    "HarpoonWindow",  -- harpoon plugin
+    "HarpoonBorder"
+  }
+  for _, name in pairs(highlights) do
+    vim.cmd.highlight(name .. ' guibg=none ctermbg=none')
+  end
+end
+transparent_override()

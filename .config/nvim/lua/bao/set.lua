@@ -1,10 +1,10 @@
 -- uncomment if you only want block cursor
---vim.opt.guicursor = ""
+vim.opt.guicursor = ""
 
 -- uncomment if you want normal cursor
-vim.opt.guicursor = "n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20"
+-- vim.opt.guicursor = "n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20"
 
-vim.opt.cursorline = true
+vim.opt.cursorline = false
 
 vim.opt.nu = true
 vim.opt.relativenumber = true
@@ -28,10 +28,6 @@ vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
 
 vim.opt.updatetime = 50
-
--- -- underline current line
--- vim.cmd('autocmd BufEnter * hi clear CursorLine') -- clear any previous highlighting of the current line
--- vim.cmd('autocmd BufEnter * hi CursorLine gui=underline') -- set the current line to be underlined
 
 -- disable comment continuation
 vim.cmd("autocmd BufEnter * set formatoptions-=cro")
