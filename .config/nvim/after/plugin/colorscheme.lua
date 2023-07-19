@@ -2,7 +2,7 @@
 vim.o.background = "dark"
 
 -- modus (emacs)
-vim.cmd.colorscheme 'modus-vivendi' -- dark
+-- vim.cmd.colorscheme 'modus-vivendi' -- dark
 -- vim.cmd.colorscheme 'modus-operandi'-- light
 
 -- gruvbox
@@ -12,6 +12,9 @@ vim.cmd.colorscheme 'modus-vivendi' -- dark
 -- vim.cmd("let g:gruvbox_material_dim_inactive_windows=1")
 -- vim.cmd("let g:gruvbox_material_ui_contrast='high'")
 -- vim.cmd.colorscheme 'gruvbox-material'
+
+-- vscode
+vim.cmd.colorscheme 'codedark'
 
 -- transparency
 local function transparent_override()

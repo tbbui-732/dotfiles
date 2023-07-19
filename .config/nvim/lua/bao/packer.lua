@@ -24,6 +24,7 @@ return require('packer').startup(function(use)
   }
   use {'ishan9299/modus-theme-vim'}
   use {'sainnhe/gruvbox-material'}
+  use {'tomasiser/vim-code-dark'}
 
   -- Language Server
   use {
