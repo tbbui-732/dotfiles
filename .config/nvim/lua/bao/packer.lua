@@ -22,9 +22,12 @@ return require('packer').startup(function(use)
     'nvim-treesitter/nvim-treesitter',
     run = function() require("nvim-treesitter.install").update { with_sync = true } end,
   }
-  use {'ishan9299/modus-theme-vim'}
   use {'sainnhe/gruvbox-material'}
-  use {'tomasiser/vim-code-dark'}
+  use { 'kaiuri/nvim-juliana',
+    config = function()
+      require 'nvim-juliana'.setup { --[=[ configuration --]=] }
+    end
+  }
 
   -- Language Server
   use {
@@ -56,7 +59,7 @@ return require('packer').startup(function(use)
   use {'lervag/vimtex'}
 
   -- Editing support
-  use {'lukas-reineke/indent-blankline.nvim'}
+  -- use {'lukas-reineke/indent-blankline.nvim'}
   use {'ray-x/lsp_signature.nvim'}
   use {
     'windwp/nvim-autopairs',

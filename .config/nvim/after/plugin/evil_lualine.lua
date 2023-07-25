@@ -6,7 +6,9 @@ local lualine = require('lualine')
 -- Color table for highlights
 -- In the style of 'Modus Vivendi'
 local colors = {
-  bg = '1a1a1a',
+  bg = '1b1b1b',
+  -- bg = '1a1a1a',
+  -- bg = '000000',
   fg = '#f0f0f0',
   yellow = '#dca432',
   cyan = '#16afca',
