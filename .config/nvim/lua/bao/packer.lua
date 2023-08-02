@@ -77,14 +77,4 @@ return require('packer').startup(function(use)
   }
   use { 'nvim-tree/nvim-web-devicons' }
   use { 'lewis6991/gitsigns.nvim' }
-  use ({
-    "utilyre/barbecue.nvim",
-    tag = "*",
-    requires = {
-      "SmiteshP/nvim-navic",
-    },
-    config = function()
-      require("barbecue").setup()
-    end,
-  })
 end)
