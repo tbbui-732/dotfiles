@@ -22,7 +22,8 @@ return require('packer').startup(function(use)
     'nvim-treesitter/nvim-treesitter',
     run = function() require("nvim-treesitter.install").update { with_sync = true } end,
   }
-  use {'sainnhe/gruvbox-material'}
+  -- use {'sainnhe/gruvbox-material'}
+  use { "ellisonleao/gruvbox.nvim" }
   use { 'kaiuri/nvim-juliana',
     config = function()
       require 'nvim-juliana'.setup { --[=[ configuration --]=] }
