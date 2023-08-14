@@ -51,10 +51,9 @@ yabai -m config right_padding                0
 yabai -m config window_gap                   0
 
 # automatically make these apps float, instead of tile
-#yabai -m rule --add app="^Cisco AnyConnect Secure Mobility Client$" manage=off
-yabai -m rule --add app="^System Settings$" manage=off
-yabai -m rule --add app="^Amphetamine Enhancer$" manage=off
-yabai -m rule --add app="^Stickies$" manage=off
+# yabai -m rule --add app="^Cisco AnyConnect Secure Mobility Client$" manage=off
+# yabai -m rule --add app="^System Settings$" manage=off
+# yabai -m rule --add app="^Amphetamine Enhancer$" manage=off
 
 # spacebar padding on top screen
 SPACEBAR_HEIGHT=$(spacebar -m config height)
