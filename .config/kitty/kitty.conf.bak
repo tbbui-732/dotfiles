@@ -9,15 +9,15 @@ bold_italic_font     JetBrains Mono Bold Italic
 # italic_font          Liga SFMono Nerd Font Italic
 # bold_italic_font     Liga SFMono Nerd Font Bold Italic
 
-font_size 20.0
+font_size 16.0
 disable_ligatures always
 scrollback_lines 1000
 sync_to_monitor no
 macos_quit_when_last_window_closed yes
-# hide_window_decorations titlebar-only
-hide_window_decorations no
+hide_window_decorations titlebar-only
+# hide_window_decorations no
 
-background_opacity 1.00
+background_opacity 0.80
 macos_traditional_fullscreen no
 
 detect_urls yes
@@ -40,6 +40,6 @@ tab_powerline_style angled
 tab_bar_min_tabs 2
 
 # BEGIN_KITTY_THEME
-# Snazzy
+# Monokai Pro (Filter Octagon)
 include current-theme.conf
 # END_KITTY_THEME
