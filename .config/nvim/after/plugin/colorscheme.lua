@@ -1,29 +1,39 @@
--- background color
+---------------------------
+-- COLORSCHEME SELECTION --
+---------------------------
 vim.o.background = "dark"
+vim.cmd.colorscheme 'poimandres'
 
--- gruvbox
--- vim.cmd.colorscheme 'gruvbox'
-
--- juliana 
-vim.cmd 'colo juliana'
-
--- transparency
-local function transparent_override()
-  local highlights = {
-    "Normal",
-    "LineNr",
-    "Folded",
-    "NonText",
-    "SpecialKey",
-    "VertSplit",
-    "SignColumn",
-    "EndOfBuffer",
-    "TablineFill",
-    "HarpoonWindow",  -- harpoon plugin
-    "HarpoonBorder"
-  }
-  for _, name in pairs(highlights) do
-    vim.cmd.highlight(name .. ' guibg=none ctermbg=none')
-  end
+---------------------------
+-- FUNCTION DECLARATIONS --
+---------------------------
+local function italicize_comment()
+    vim.api.nvim_set_hl(0, 'Comment', { italic=true, fg="#637087" }) -- this is value between bluegray1 and bluegray2 of poimandres
 end
-transparent_override()
+
+local function transparency_override()
+    local highlights = {
+        "Normal",
+        "LineNr",
+        "Folded",
+        "NonText",
+        "SpecialKey",
+        "VertSplit",
+        "SignColumn",
+        "EndOfBuffer",
+        "TablineFill",
+
+        -- Harpoon Plugin
+        "HarpoonWindow",
+        "HarpoonBorder"
+    }
+    for _, name in pairs(highlights) do
+        vim.cmd.highlight(name .. ' guibg=none ctermbg=none')
+    end
+end
+
+---------------------------
+--          RUN          --
+---------------------------
+italicize_comment()
+transparency_override()
