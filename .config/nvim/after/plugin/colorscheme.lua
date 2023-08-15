@@ -2,8 +2,9 @@
 -- COLORSCHEME SELECTION --
 ---------------------------
 vim.o.background = "dark"
--- vim.cmd.colorscheme 'poimandres'
-vim.cmd.colorscheme 'aquarium'
+-- vim.cmd.colorscheme 'aquarium'
+-- vim.cmd.colorscheme 'substrata'
+vim.cmd.colorscheme 'gruvbox'
 
 ---------------------------
 -- FUNCTION DECLARATIONS --
@@ -37,5 +38,5 @@ end
 ---------------------------
 --          RUN          --
 ---------------------------
-italicize_comment()
+-- italicize_comment()
 transparency_override()

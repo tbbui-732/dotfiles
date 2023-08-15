@@ -35,4 +35,4 @@ vim.cmd("autocmd BufEnter * setlocal formatoptions-=cro")
 
 -- netrw settings
 vim.cmd("let g:netrw_banner=1")
-vim.cmd("let g:netrw_liststyle=3")
+-- vim.cmd("let g:netrw_liststyle=3")
