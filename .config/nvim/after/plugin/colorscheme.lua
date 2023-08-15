@@ -2,7 +2,8 @@
 -- COLORSCHEME SELECTION --
 ---------------------------
 vim.o.background = "dark"
-vim.cmd.colorscheme 'poimandres'
+-- vim.cmd.colorscheme 'poimandres'
+vim.cmd.colorscheme 'aquarium'
 
 ---------------------------
 -- FUNCTION DECLARATIONS --
@@ -27,6 +28,7 @@ local function transparency_override()
         "HarpoonWindow",
         "HarpoonBorder"
     }
+
     for _, name in pairs(highlights) do
         vim.cmd.highlight(name .. ' guibg=none ctermbg=none')
     end
