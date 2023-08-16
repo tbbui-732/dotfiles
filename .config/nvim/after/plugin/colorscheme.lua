@@ -2,9 +2,15 @@
 -- COLORSCHEME SELECTION --
 ---------------------------
 vim.o.background = "dark"
--- vim.cmd.colorscheme 'aquarium'
--- vim.cmd.colorscheme 'substrata'
-vim.cmd.colorscheme 'gruvbox'
+-- vim.cmd.colorscheme 'gruvbox'
+vim.cmd.colorscheme 'modus-vivendi'
+
+
+---------------------------
+--     MODUS CONFIGS     --
+---------------------------
+vim.g.modus_green_strings = 1
+
 
 ---------------------------
 -- FUNCTION DECLARATIONS --
@@ -34,6 +40,7 @@ local function transparency_override()
     vim.cmd.highlight(name .. ' guibg=none ctermbg=none')
   end
 end
+
 
 ---------------------------
 --          RUN          --

@@ -111,14 +111,13 @@ r() {
     fi
 }
 
+# general aliases
 alias v="nvim"
-alias school="cd ~/Documents/UConn/"
 alias p="python3"
-alias sp="spotify"
 
 # quick config changes
-alias kittyconfig="nvim ~/.config/kitty/kitty.conf"
-alias nvimconfigs="cd ~/.config/nvim/lua/bao/"
+alias kittyconfig="cd ~/.config/kitty/"
+alias nvimconfig="cd ~/.config/nvim/lua/bao/"
 
 # file exploring
 alias ls="exa"

@@ -23,6 +23,7 @@ return require('packer').startup(function(use)
     run = function() require("nvim-treesitter.install").update { with_sync = true } end,
   }
   use { "ellisonleao/gruvbox.nvim" }
+  use { "ishan9299/modus-theme-vim" }
 
   -- Language Server
   use {
