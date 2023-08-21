@@ -18,10 +18,10 @@ return require('packer').startup(function(use)
   }
 
   -- Colorschemes + Treesitter
-  use {
-    'nvim-treesitter/nvim-treesitter',
-    run = function() require("nvim-treesitter.install").update { with_sync = true } end,
-  }
+  -- use {
+  --   'nvim-treesitter/nvim-treesitter',
+  --   run = function() require("nvim-treesitter.install").update { with_sync = true } end,
+  -- }
   use { "ellisonleao/gruvbox.nvim" }
   use { "ishan9299/modus-theme-vim" }
 

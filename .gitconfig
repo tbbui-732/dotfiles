@@ -6,6 +6,7 @@
 	defaultBranch = main
 [core]
   editor = nvim
+	excludesfile = /Users/brian-bui/.gitignore_global
 [maintenance]
 	repo = /Users/brian-bui/.dotfile
 	repo = /Users/brian-bui/.nvm

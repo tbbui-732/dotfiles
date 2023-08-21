@@ -1,13 +1,13 @@
 # Fonts
-# font_family          JetBrains Mono Regular
-# bold_font            JetBrains Mono Bold
-# italic_font          JetBrains Mono Italic
-# bold_italic_font     JetBrains Mono Bold Italic
+font_family          JetBrains Mono Regular
+bold_font            JetBrains Mono Bold
+italic_font          JetBrains Mono Italic
+bold_italic_font     JetBrains Mono Bold Italic
 
-font_family          Liga SFMono Nerd Font Regular
-bold_font            Liga SFMono Nerd Font Bold
-italic_font          Liga SFMono Nerd Font Italic
-bold_italic_font     Liga SFMono Nerd Font Bold Italic
+# font_family          Liga SFMono Nerd Font Regular
+# bold_font            Liga SFMono Nerd Font Bold
+# italic_font          Liga SFMono Nerd Font Italic
+# bold_italic_font     Liga SFMono Nerd Font Bold Italic
 
 font_size 16.0
 disable_ligatures always
@@ -40,6 +40,6 @@ tab_powerline_style angled
 tab_bar_min_tabs 2
 
 # BEGIN_KITTY_THEME
-# Modus Vivendi
+# Modus Operandi
 include current-theme.conf
 # END_KITTY_THEME
