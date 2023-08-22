@@ -132,6 +132,9 @@ alias gp="git push"
 alias gpu="git pull"
 alias gck="git checkout"
 
+# default browser
+alias open="open -a 'Google Chrome'"
+
 # ssh settings
 alias s="kitty +kitten ssh"
 
