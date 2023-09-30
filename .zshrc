@@ -132,8 +132,17 @@ alias gp="git push"
 alias gpu="git pull"
 alias gck="git checkout"
 
-# default browser
-alias open="open -a 'Google Chrome'"
+# only open HTML files into Chrome
+custom_open() {
+  if [[ $# -eq 1 && $1 == *.html ]]; then 
+    open -a "Google Chrome" "$1"
+  else
+    open "$@"
+  fi
+}
+
+alias op='custom_open'
+
 
 # ssh settings
 alias s="kitty +kitten ssh"
