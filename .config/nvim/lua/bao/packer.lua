@@ -22,14 +22,12 @@ return require('packer').startup(function(use)
   --   'nvim-treesitter/nvim-treesitter',
   --   run = function() require("nvim-treesitter.install").update { with_sync = true } end,
   -- }
-  use { "ellisonleao/gruvbox.nvim" }
-  use { "ishan9299/modus-theme-vim" }
   use ({
     'NTBBloodbath/doom-one.nvim',
     setup = function()
       vim.g.doom_one_cursor_coloring = false
       vim.g.doom_one_terminal_colors = false
-      vim.g.doom_one_italic_comments = true
+      vim.g.doom_one_italic_comments = false
       vim.g.doom_one_enable_treesitter = false
       vim.g.doom_one_transparent_background = false -- NOTE: handled by another internal function
 
