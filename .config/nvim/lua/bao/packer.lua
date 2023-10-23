@@ -12,21 +12,12 @@ return require('packer').startup(function(use)
     requires = { {'nvim-lua/plenary.nvim'} }
   }
 
-  -- use {
-  --   'ThePrimeagen/harpoon',
-  --   requires = {'nvim-lua/plenary.nvim'},
-  -- }
-
-  -- Colorschemes + Treesitter
-  -- use {
-  --   'nvim-treesitter/nvim-treesitter',
-  --   run = function() require("nvim-treesitter.install").update { with_sync = true } end,
-  -- }
+  -- Colorschemes
   use ({
     'NTBBloodbath/doom-one.nvim',
     setup = function()
       vim.g.doom_one_cursor_coloring = false
-      vim.g.doom_one_terminal_colors = false
+      vim.g.doom_one_terminal_colors = true
       vim.g.doom_one_italic_comments = false
       vim.g.doom_one_enable_treesitter = false
       vim.g.doom_one_transparent_background = false -- NOTE: handled by another internal function
