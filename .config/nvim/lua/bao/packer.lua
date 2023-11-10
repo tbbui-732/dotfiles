@@ -44,6 +44,8 @@ return require('packer').startup(function(use)
     end,
   })
 
+  use { "ellisonleao/gruvbox.nvim" }
+
   -- Language Server
   use {
     'VonHeikemen/lsp-zero.nvim',

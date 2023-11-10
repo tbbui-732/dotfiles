@@ -2,15 +2,14 @@
 -- COLORSCHEME SELECTION --
 ---------------------------
 vim.o.background = "dark"
--- vim.cmd.colorscheme 'gruvbox'
--- vim.cmd.colorscheme 'modus-vivendi'
-vim.cmd.colorscheme "doom-one"
+vim.cmd.colorscheme 'gruvbox'
+-- vim.cmd.colorscheme "doom-one"
 
 
 ---------------------------
 --     MODUS CONFIGS     --
 ---------------------------
-vim.g.modus_green_strings = 1
+-- vim.g.modus_green_strings = 1
 
 
 ---------------------------
