@@ -40,6 +40,6 @@ tab_powerline_style angled
 tab_bar_min_tabs 2
 
 # BEGIN_KITTY_THEME
-# Doom One
+# Gruvbox Dark
 include current-theme.conf
 # END_KITTY_THEME

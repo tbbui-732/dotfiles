@@ -1,7 +1,7 @@
 # This is Git's per-user configuration file.
 [user]
-	name = Thien-Bao Bui
-    email = 80117447+tbbui-732@users.noreply.github.com
+	name = thienbaobui
+	email = 80117447+tbbui-732@users.noreply.github.com
 [init]
 	defaultBranch = main
 [core]
@@ -11,3 +11,8 @@
 	repo = /Users/brian-bui/.dotfile
 	repo = /Users/brian-bui/.nvm
 	repo = /Users/brian-bui/.oh-my-zsh
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
