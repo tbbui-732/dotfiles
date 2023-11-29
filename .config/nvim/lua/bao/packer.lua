@@ -5,6 +5,11 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
+  -- Treesitter
+  use {
+    "nvim-treesitter/nvim-treesitter", run = ":TSUpdate"
+  }
+
   -- Navigation
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.x',
@@ -103,9 +108,9 @@ return require('packer').startup(function(use)
       require("neorg").setup {
         load = {
           -- Enable all default modules -> "Load all switch"
-          ["cord.defaults"] = {},
+          ["core.defaults"] = {},
 
-          -- Manage work spaces
+          -- -- Manage work spaces
           ["core.dirman"] = {
             config = {
               workspaces = {
@@ -114,12 +119,12 @@ return require('packer').startup(function(use)
               }
             }
           },
-
-          -- Enable icons
-          ["core.concealer"] = {},
-
-          -- Completion
-          ["core.completion"] = {}
+          --
+          -- -- Enable icons
+          -- ["core.concealer"] = {},
+          --
+          -- -- Completion
+          -- ["core.completion"] = {}
         }
       }
     end
