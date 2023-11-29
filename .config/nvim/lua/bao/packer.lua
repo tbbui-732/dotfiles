@@ -94,4 +94,34 @@ return require('packer').startup(function(use)
   }
   use { 'nvim-tree/nvim-web-devicons' }
   use { 'lewis6991/gitsigns.nvim' }
+
+  -- Organization and note taking software
+  use {
+    "nvim-neorg/neorg",
+    run = ":Neorg sync-parsers",
+    config = function()
+      require("neorg").setup {
+        load = {
+          -- Enable all default modules -> "Load all switch"
+          ["cord.defaults"] = {},
+
+          -- Manage work spaces
+          ["core.dirman"] = {
+            config = {
+              workspaces = {
+                personal = "~/Notes/Personal",
+                school = "~/Notes/School"
+              }
+            }
+          },
+
+          -- Enable icons
+          ["core.concealer"] = {},
+
+          -- Completion
+          ["core.completion"] = {}
+        }
+      }
+    end
+  }
 end)
