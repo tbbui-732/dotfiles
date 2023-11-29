@@ -101,32 +101,9 @@ return require('packer').startup(function(use)
   use { 'lewis6991/gitsigns.nvim' }
 
   -- Organization and note taking software
-  use {
-    "nvim-neorg/neorg",
-    run = ":Neorg sync-parsers",
+  use {'nvim-orgmode/orgmode',
     config = function()
-      require("neorg").setup {
-        load = {
-          -- Enable all default modules -> "Load all switch"
-          ["core.defaults"] = {},
-
-          -- -- Manage work spaces
-          ["core.dirman"] = {
-            config = {
-              workspaces = {
-                personal = "~/Notes/Personal",
-                school = "~/Notes/School"
-              }
-            }
-          },
-          --
-          -- -- Enable icons
-          -- ["core.concealer"] = {},
-          --
-          -- -- Completion
-          -- ["core.completion"] = {}
-        }
-      }
+      require('orgmode').setup{}
     end
   }
 end)
