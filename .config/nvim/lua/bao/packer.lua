@@ -5,11 +5,6 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
-  -- Treesitter
-  use {
-    "nvim-treesitter/nvim-treesitter", run = ":TSUpdate"
-  }
-
   -- Navigation
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.x',
@@ -99,11 +94,4 @@ return require('packer').startup(function(use)
   }
   use { 'nvim-tree/nvim-web-devicons' }
   use { 'lewis6991/gitsigns.nvim' }
-
-  -- Organization and note taking software
-  use {'nvim-orgmode/orgmode',
-    config = function()
-      require('orgmode').setup{}
-    end
-  }
 end)
