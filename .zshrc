@@ -10,7 +10,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # //////////////////////
 # /// --- THEME --- ////
 # //////////////////////
-ZSH_THEME="half-life"
+ZSH_THEME="minimal"
 
 # Uncomment to use PURE
 # fpath+=("$(brew --prefix)/share/zsh/site-functions")
