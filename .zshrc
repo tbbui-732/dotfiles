@@ -10,16 +10,18 @@ export ZSH="$HOME/.oh-my-zsh"
 # //////////////////////
 # /// --- THEME --- ////
 # //////////////////////
-ZSH_THEME=""
-fpath+=("$(brew --prefix)/share/zsh/site-functions")
-fpath+=($HOME/.zsh/pure)
+ZSH_THEME="half-life"
 
-autoload -U promptinit; promptinit
-prompt pure
-
-zstyle :prompt:pure:prompt:success color green
-zstyle :prompt:pure:git:branch color green
-zstyle :prompt:pure:path color cyan
+# Uncomment to use PURE
+# fpath+=("$(brew --prefix)/share/zsh/site-functions")
+# fpath+=($HOME/.zsh/pure)
+#
+# autoload -U promptinit; promptinit
+# prompt pure
+#
+# zstyle :prompt:pure:prompt:success color green
+# zstyle :prompt:pure:git:branch color green
+# zstyle :prompt:pure:path color cyan
 
 # ////////////////////////
 # /// --- SETTINGS --- ///
@@ -124,10 +126,10 @@ alias kittyconfig="cd ~/.config/kitty/"
 alias nvimconfig="cd ~/.config/nvim/lua/bao/"
 
 # file exploring
-alias ls="exa"
-alias ll="exa -alh"
-alias tree="exa --tree"
-alias cat="bat"
+# alias ls="exa"
+# alias ll="exa -alh"
+# alias tree="exa --tree"
+# alias cat="bat"
 
 # git
 alias gap="git add --patch"
