@@ -3,7 +3,8 @@
 ---------------------------
 vim.o.background = "dark"
 -- vim.cmd.colorscheme 'gruvbox'
-vim.cmd.colorscheme "doom-one"
+-- vim.cmd.colorscheme "doom-one"
+vim.cmd.colorscheme "rose-pine"
 
 
 ---------------------------
@@ -40,4 +41,4 @@ end
 --          RUN          --
 ---------------------------
 -- italicize_comment()
-transparency_override()
+-- transparency_override()

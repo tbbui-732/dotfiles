@@ -4,10 +4,15 @@
 # italic_font          JetBrains Mono Italic
 # bold_italic_font     JetBrains Mono Bold Italic
 
-font_family          Liga SFMono Nerd Font Regular
-bold_font            Liga SFMono Nerd Font Bold
-italic_font          Liga SFMono Nerd Font Italic
-bold_italic_font     Liga SFMono Nerd Font Bold Italic
+# font_family          Liga SFMono Nerd Font Regular
+# bold_font            Liga SFMono Nerd Font Bold
+# italic_font          Liga SFMono Nerd Font Italic
+# bold_italic_font     Liga SFMono Nerd Font Bold Italic
+
+font_family          Comic Mono
+bold_font            Comic Mono
+italic_font          Comic Mono
+bold_italic_font     Comic Mono
 
 font_size 18.0
 disable_ligatures always
@@ -35,11 +40,13 @@ cursor_shape block
 
 # tab bar adjustments
 tab_bar_edge top
-tab_bar_style powerline
-tab_powerline_style angled
+tab_bar_style separator
+tab_separator " $"
+# tab_bar_style powerline
+# tab_powerline_style slanted
 tab_bar_min_tabs 2
 
 # BEGIN_KITTY_THEME
-# Doom Vibrant
+# Doom One
 include current-theme.conf
 # END_KITTY_THEME

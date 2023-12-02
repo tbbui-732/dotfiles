@@ -10,18 +10,18 @@ export ZSH="$HOME/.oh-my-zsh"
 # //////////////////////
 # /// --- THEME --- ////
 # //////////////////////
-ZSH_THEME="minimal"
+ZSH_THEME=""
 
 # Uncomment to use PURE
-# fpath+=("$(brew --prefix)/share/zsh/site-functions")
-# fpath+=($HOME/.zsh/pure)
-#
-# autoload -U promptinit; promptinit
-# prompt pure
-#
-# zstyle :prompt:pure:prompt:success color green
-# zstyle :prompt:pure:git:branch color green
-# zstyle :prompt:pure:path color cyan
+fpath+=("$(brew --prefix)/share/zsh/site-functions")
+fpath+=($HOME/.zsh/pure)
+
+autoload -U promptinit; promptinit
+prompt pure
+
+zstyle :prompt:pure:prompt:success color green
+zstyle :prompt:pure:git:branch color green
+zstyle :prompt:pure:path color cyan
 
 # ////////////////////////
 # /// --- SETTINGS --- ///
