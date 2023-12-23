@@ -7,14 +7,18 @@ return require('packer').startup(function(use)
 
   -- Navigation
   use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.x',
-    -- or                            , branch = '0.1.x',
+    'nvim-telescope/telescope.nvim', tag = '0.1.5',
     requires = { {'nvim-lua/plenary.nvim'} }
+  }
+  use {
+    "ThePrimeagen/harpoon",
+    requires = {"nvim-lua/plenary.nvim"}
   }
 
   -- Colorschemes
   use { "ellisonleao/gruvbox.nvim" }
   use { 'rose-pine/neovim', as = 'rose-pine' }
+  use { "miikanissi/modus-themes.nvim" }
 
   -- Language Server
   use {

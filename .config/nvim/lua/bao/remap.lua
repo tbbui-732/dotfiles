@@ -1,20 +1,28 @@
 -- Pass through long, single-line texts
-vim.keymap.set('n', 'k', function()
+vim.keymap.set("n", "k", function()
   local count = vim.v.count
   if count == 0 then
-    return 'gk'
+    return "gk"
   end
-  return 'k'
+  return "k"
 end, {expr = true, noremap = true})
 
-vim.keymap.set('n', 'j', function()
+vim.keymap.set("n", "j", function()
   local count = vim.v.count
   if count == 0 then
-    return 'gj'
+    return "gj"
   end
-  return 'j'
+  return "j"
 end, {expr = true, noremap = true})
-
 
 -- Netrw keybindings
-vim.keymap.set('n', '<leader>ef', ':Ex<CR>');
+vim.keymap.set("n", "<leader>ef", ":Ex<CR>");
+
+-- View buffer list
+vim.keymap.set("n", "<leader>m", ":buffers<CR>")
+
+-- Bprev
+vim.keymap.set("n", "<leader>j", ":bprev<CR>")
+
+-- Bnext
+vim.keymap.set("n", "<leader>k", ":bnext<CR>")

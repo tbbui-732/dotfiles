@@ -3,17 +3,13 @@
 ---------------------------
 vim.o.background = "dark"
 -- vim.cmd.colorscheme 'gruvbox'
--- vim.cmd.colorscheme "doom-one"
-vim.cmd.colorscheme "rose-pine"
+-- vim.cmd.colorscheme "rose-pine"
+vim.cmd.colorscheme "modus"
 
 
 ---------------------------
 -- FUNCTION DECLARATIONS --
 ---------------------------
-local function italicize_comment()
-  vim.api.nvim_set_hl(0, 'Comment', { italic=true, fg="#637087" }) -- this is value between bluegray1 and bluegray2 of poimandres
-end
-
 local function transparency_override()
   local highlights = {
     "Normal",
@@ -40,5 +36,4 @@ end
 ---------------------------
 --          RUN          --
 ---------------------------
--- italicize_comment()
--- transparency_override()
+transparency_override()
