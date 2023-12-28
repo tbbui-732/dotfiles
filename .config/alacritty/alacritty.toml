@@ -8,7 +8,20 @@ opacity = 0.8
 blur = true
 
 
+[selection]
+save_to_clipboard = true
+
+
 [font]
 normal = { family = "FiraCode Nerd Font Mono", style = "Regular" }
 bold = { family = "FiraCode Nerd Font Mono", style = "Bold" }
 size = 16.0
+
+
+[cursor]
+style = {shape="Block", blinking="On"}
+blink_interval = 450
+
+
+[mouse]
+hide_when_typing = true
