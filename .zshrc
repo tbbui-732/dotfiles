@@ -85,6 +85,10 @@ export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
+# racket
+export PATH="/Applications/Racket v8.11.1/bin:$PATH"
+
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -138,6 +142,7 @@ alias gc="git commit"
 alias gp="git push"
 alias gpu="git pull"
 alias gck="git checkout"
+# alias gs="git status"
 
 # only open HTML files into Chrome
 custom_open() {

@@ -16,7 +16,7 @@ lsp.set_preferences({
         }
 })
 
--- Automatically displays diagnostics
+-- Automatically displays diagnostics on hold
 vim.api.nvim_create_autocmd({"CursorHold"}, {
         callback = function()
                 vim.diagnostic.open_float()
@@ -26,6 +26,7 @@ vim.api.nvim_create_autocmd({"CursorHold"}, {
 -- LSP mappings
 vim.keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>')
 vim.keymap.set('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<cr>')
+vim.keymap.set('n', 'gR', '<cmd>lua vim.lsp.buf.rename()<cr>')
 
 lsp.nvim_workspace()
 lsp.setup()
@@ -36,7 +37,6 @@ lsp.setup()
 --   map('n', 'go', '<cmd>lua vim.lsp.buf.type_definition()<cr>')
 --   map('n', 'gr', '<cmd>lua vim.lsp.buf.references()<cr>')
 --   map('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<cr>')
---   map('n', '<F2>', '<cmd>lua vim.lsp.buf.rename()<cr>')
 --   map('n', '<F4>', '<cmd>lua vim.lsp.buf.code_action()<cr>')
 --   map('x', '<F4>', '<cmd>lua vim.lsp.buf.range_code_action()<cr>')
 -- 

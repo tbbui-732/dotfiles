@@ -1,10 +1,8 @@
--- if vim.g.neovide then
---   vim.g.transparency = 1.0
---   vim.g.neovide_transparency = 1.0
--- end
-
 -- set leader key to space
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
+
+-- line numbering for netrw
+vim.g.netrw_bufsettings = "noma nomod nu rnu nobl nowrap ro"
 
 require("bao")

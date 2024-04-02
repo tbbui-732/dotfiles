@@ -1,19 +1,19 @@
 -- uncomment if you only want block cursor
 -- vim.opt.guicursor = ""
 
--- uncomment if you want normal cursor
-vim.opt.guicursor = "n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20"
-
+-- Based on cursor position, highlight the current line
 vim.opt.cursorline = true
 
+-- Line numbering
 vim.opt.nu = true
-vim.opt.relativenumber = false
+vim.opt.relativenumber = true
 
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
+-- White space sizing
+local tabsize = 4
+vim.opt.tabstop = tabsize
+vim.opt.softtabstop = tabsize
+vim.opt.shiftwidth = tabsize
 vim.opt.expandtab = true
-
 vim.opt.smartindent = true
 
 vim.opt.wrap = false
@@ -34,4 +34,4 @@ vim.cmd("autocmd BufEnter * set formatoptions-=cro")
 vim.cmd("autocmd BufEnter * setlocal formatoptions-=cro")
 
 -- netrw settings
-vim.cmd("let g:netrw_banner=1")
+vim.cmd("let g:netrw_banner=0")
