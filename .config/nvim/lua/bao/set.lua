@@ -2,7 +2,7 @@
 -- vim.opt.guicursor = ""
 
 -- Based on cursor position, highlight the current line
-vim.opt.cursorline = true
+vim.opt.cursorline = false
 
 -- Line numbering
 vim.opt.nu = true
@@ -26,8 +26,11 @@ vim.opt.termguicolors = true
 
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
+-- vim.opt.colorcolumn = "80"
 
 vim.opt.updatetime = 50
+
+vim.opt.laststatus = 2
 
 -- disable comment continuation
 vim.cmd("autocmd BufEnter * set formatoptions-=cro")

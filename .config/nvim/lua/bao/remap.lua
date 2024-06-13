@@ -26,3 +26,11 @@ vim.keymap.set("n", "<leader>j", ":bprev<CR>")
 
 -- Bnext
 vim.keymap.set("n", "<leader>k", ":bnext<CR>")
+
+-- Half page up and down
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+
+-- Lex shortcut
+vim.keymap.set("n", "<C-b>", ":Lex<CR>")
+vim.keymap.set("i", "<C-b>", ":Lex<CR>")

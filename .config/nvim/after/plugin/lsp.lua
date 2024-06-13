@@ -17,11 +17,11 @@ lsp.set_preferences({
 })
 
 -- Automatically displays diagnostics on hold
-vim.api.nvim_create_autocmd({"CursorHold"}, {
-        callback = function()
-                vim.diagnostic.open_float()
-        end
-})
+-- vim.api.nvim_create_autocmd({"CursorHold"}, {
+--         callback = function()
+--                 vim.diagnostic.open_float()
+--         end
+-- })
 
 -- LSP mappings
 vim.keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>')

@@ -2,11 +2,8 @@
 -- COLORSCHEME SELECTION --
 ---------------------------
 vim.o.background = "dark"
-vim.cmd.colorscheme "rose-pine"
--- vim.cmd.colorscheme "modus"
--- vim.cmd.colorscheme "gruvbox"
--- vim.cmd.colorscheme "catppuccin"
--- vim.cmd.colorscheme "nofrils-dark"
+-- vim.cmd.colorscheme "rose-pine"
+vim.cmd.colorscheme "nord"
 
 ---------------------------
 -- FUNCTION DECLARATIONS --
@@ -37,4 +34,4 @@ end
 ---------------------------
 --          RUN          --
 ---------------------------
-transparency_override()
+-- transparency_override()

@@ -6,11 +6,8 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     -- Colorschemes
-    use { 'miikanissi/modus-themes.nvim' }
-    use { 'ellisonleao/gruvbox.nvim' }
-    use { 'catppuccin/nvim', as = 'catppuccin' }
-    use { 'robertmeta/nofrils' }
     use { 'rose-pine/neovim' }
+    use { 'nordtheme/vim' }
 
     -- Language Server
     use {
@@ -37,10 +34,15 @@ return require('packer').startup(function(use)
 
     -- Editing support
     use {
+        'nvim-telescope/telescope.nvim', tag = '0.1.x',
+        -- or                            , branch = '0.1.6',
+        requires = { {'nvim-lua/plenary.nvim'} }
+    }
+    use {
         'nvim-lualine/lualine.nvim',
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
-    use {'ray-x/lsp_signature.nvim'}
+    use { 'ray-x/lsp_signature.nvim' }
     use { 'nvim-tree/nvim-web-devicons' }
     use { 'lewis6991/gitsigns.nvim' }
 end)
