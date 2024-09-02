@@ -1,9 +1,7 @@
 # Things I use:
 
-## editor:          [neovim]
-## terminal:        [kitty]
+Note: This is for Ubuntu desktop branch
+## editor:          [neovim + tmux]
+## terminal:        [terminal]
 ## shell:           [zsh + omz]
-## window manager:  [yabai + skhd]
-
-# Note:
-symlink yabairc, skhdrc, tmux.conf, and zshrc files to ~/* directory
+## window manager:  [i3]
