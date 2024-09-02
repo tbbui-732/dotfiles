@@ -1,46 +1,55 @@
-local lsp = require('lsp-zero')
+---
+-- LSP configuration
+---
+local lsp_zero = require('lsp-zero')
 
-lsp.set_preferences({
-        suggest_lsp_servers = true,
-        setup_servers_on_start = true,
-        set_lsp_keymaps = true,
-        configure_diagnostics = true,
-        cmp_capabilities = true,
-        manage_nvim_cmp = true,
-        call_servers = 'local',
-        sign_icons = {
-                error = '✘',
-                warn = '▲',
-                hint = '⚑',
-                info = ''
-        }
+local lsp_attach = function(client, bufnr)
+    local opts = {buffer = bufnr}
+
+    vim.keymap.set('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>', opts)
+    vim.keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>', opts)
+    vim.keymap.set('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<cr>', opts)
+    vim.keymap.set('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<cr>', opts)
+    vim.keymap.set('n', 'go', '<cmd>lua vim.lsp.buf.type_definition()<cr>', opts)
+    vim.keymap.set('n', 'gr', '<cmd>lua vim.lsp.buf.references()<cr>', opts)
+    vim.keymap.set('n', 'gs', '<cmd>lua vim.lsp.buf.signature_help()<cr>', opts)
+    vim.keymap.set('n', 'gR', '<cmd>lua vim.lsp.buf.rename()<cr>', opts)
+    vim.keymap.set({'n', 'x'}, '<F3>', '<cmd>lua vim.lsp.buf.format({async = true})<cr>', opts)
+    vim.keymap.set('n', '<F4>', '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
+end
+
+lsp_zero.extend_lspconfig({
+    sign_text = true,
+    lsp_attach = lsp_attach,
+    capabilities = require('cmp_nvim_lsp').default_capabilities(),
 })
 
+-- These are just examples. Replace them with the language
+-- servers you have installed in your system
+require('lspconfig').gleam.setup({})
+require('lspconfig').rust_analyzer.setup({})
+
 -- Automatically displays diagnostics on hold
--- vim.api.nvim_create_autocmd({"CursorHold"}, {
---         callback = function()
---                 vim.diagnostic.open_float()
---         end
--- })
+vim.api.nvim_create_autocmd({"CursorHold"}, {
+    callback = function()
+        vim.diagnostic.open_float()
+    end
+})
 
--- LSP mappings
-vim.keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>')
-vim.keymap.set('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<cr>')
-vim.keymap.set('n', 'gR', '<cmd>lua vim.lsp.buf.rename()<cr>')
+---
+-- Autocompletion setup
+---
+local cmp = require('cmp')
 
-lsp.nvim_workspace()
-lsp.setup()
-
---   -- LSP actions
---   map('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>')
---   map('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<cr>')
---   map('n', 'go', '<cmd>lua vim.lsp.buf.type_definition()<cr>')
---   map('n', 'gr', '<cmd>lua vim.lsp.buf.references()<cr>')
---   map('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<cr>')
---   map('n', '<F4>', '<cmd>lua vim.lsp.buf.code_action()<cr>')
---   map('x', '<F4>', '<cmd>lua vim.lsp.buf.range_code_action()<cr>')
--- 
---   -- Diagnostics
---   map('n', 'gl', '<cmd>lua vim.diagnostic.open_float()<cr>')
---   map('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<cr>')
---   map('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<cr>')
+cmp.setup({
+    sources = {
+        {name = 'nvim_lsp'},
+    },
+    snippet = {
+        expand = function(args)
+            -- You need Neovim v0.10 to use vim.snippet
+            vim.snippet.expand(args.body)
+        end,
+    },
+    mapping = cmp.mapping.preset.insert({}),
+})

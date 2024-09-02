@@ -7,7 +7,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # //////////////////////
 # /// --- THEME --- ////
 # //////////////////////
-ZSH_THEME=""
+ZSH_THEME="robbyrussell"
 
 # ////////////////////////
 # /// --- SETTINGS --- ///
