@@ -4,6 +4,7 @@
 vim.o.background = "dark"
 -- vim.cmd.colorscheme "rose-pine"
 vim.cmd.colorscheme "nord"
+-- vim.cmd.colorscheme "matrix"
 
 ---------------------------
 -- FUNCTION DECLARATIONS --
@@ -34,4 +35,4 @@ end
 ---------------------------
 --          RUN          --
 ---------------------------
--- transparency_override()
+transparency_override()

@@ -2,7 +2,7 @@
 -- vim.opt.guicursor = ""
 
 -- Based on cursor position, highlight the current line
-vim.opt.cursorline = false
+vim.opt.cursorline = true
 
 -- Line numbering
 vim.opt.nu = true
@@ -24,7 +24,7 @@ vim.opt.incsearch = true
 
 vim.opt.termguicolors = true
 
-vim.opt.scrolloff = 8
+vim.opt.scrolloff = 0
 vim.opt.signcolumn = "yes"
 -- vim.opt.colorcolumn = "80"
 

@@ -8,6 +8,7 @@ return require('packer').startup(function(use)
     -- Colorschemes
     use { 'rose-pine/neovim' }
     use { 'nordtheme/vim' }
+    use { 'iruzo/matrix-nvim' }
 
     -- Language Server
     use {
@@ -38,10 +39,10 @@ return require('packer').startup(function(use)
         -- or                            , branch = '0.1.6',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
-    use {
-        'nvim-lualine/lualine.nvim',
-        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
-    }
+    -- use {
+    --     'nvim-lualine/lualine.nvim',
+    --     requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    -- }
     use { 'ray-x/lsp_signature.nvim' }
     use { 'nvim-tree/nvim-web-devicons' }
     use { 'lewis6991/gitsigns.nvim' }
