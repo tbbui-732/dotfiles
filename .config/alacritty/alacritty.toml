@@ -1,10 +1,11 @@
 import = [
-    "~/.config/alacritty/themes/nord.toml"
+    "~/.config/alacritty/themes/gruvbox_dark.toml"
 ]
 
 [window]
 # padding = { x = 3 }
-opacity = 1.00
+opacity = 0.90
+decorations = "None"
 
 
 [font]
@@ -14,7 +15,7 @@ italic      = { family = "JetBrainsMono Nerd Font Mono", style = "Italic" }
 bold_italic = { family = "JetBrainsMono Nerd Font Mono", style = "Bold Italic" }
 
 size = 25.0
-offset = { x = 0, y = 4 }
+offset = { x = 1, y = 8 }
 
 
 [cursor]
