@@ -37,8 +37,7 @@ return require('packer').startup(function(use)
 
     -- Editing support
     use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.x',
-        -- or                            , branch = '0.1.6',
+        'nvim-telescope/telescope.nvim', tag = '0.1.8',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
     use {
