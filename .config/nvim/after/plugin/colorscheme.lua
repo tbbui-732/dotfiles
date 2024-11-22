@@ -2,8 +2,8 @@
 -- COLORSCHEME SELECTION --
 ---------------------------
 vim.o.background = "dark"
---vim.cmd.colorscheme "nord"
-vim.cmd.colorscheme "gruvbox"
+vim.cmd.colorscheme "nord"
+--vim.cmd.colorscheme "gruvbox"
 
 
 ---------------------------
