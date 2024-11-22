@@ -44,7 +44,7 @@ yabai -m config mouse_action2                resize
 # General space settings
 yabai -m config layout                       bsp # bsp -> tiled, float -> nothing happens
 yabai -m config top_padding                  0
-yabai -m config bottom_padding               5
+yabai -m config bottom_padding               0
 yabai -m config left_padding                 0
 yabai -m config right_padding                0
 yabai -m config window_gap                   5
