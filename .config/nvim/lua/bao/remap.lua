@@ -34,3 +34,6 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz")
 -- Lex shortcut
 vim.keymap.set("n", "<C-b>", ":Lex<CR>")
 vim.keymap.set("i", "<C-b>", ":Lex<CR>")
+
+-- Searching
+vim.keymap.set("n", "/", "/\\c")
