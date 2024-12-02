@@ -11,6 +11,7 @@ return require('packer').startup(function(use)
     use { 'iruzo/matrix-nvim' }
     use { 'miikanissi/modus-themes.nvim' }
     use { "ellisonleao/gruvbox.nvim" }
+    use { "talha-akram/noctis.nvim" }
 
     -- Language Server
     use {

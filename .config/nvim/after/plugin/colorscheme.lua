@@ -4,6 +4,7 @@
 vim.o.background = "dark"
 vim.cmd.colorscheme "nord"
 --vim.cmd.colorscheme "gruvbox"
+--vim.cmd.colorscheme "noctis_lilac"
 
 
 ---------------------------
