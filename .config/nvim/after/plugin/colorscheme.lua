@@ -3,8 +3,8 @@
 ---------------------------
 vim.o.background = "dark"
 vim.cmd.colorscheme "nord"
---vim.cmd.colorscheme "gruvbox"
---vim.cmd.colorscheme "noctis_lilac"
+--vim.cmd.colorscheme "modus_vivendi"
+--vim.cmd.colorscheme "alabaster"
 
 
 ---------------------------
@@ -36,4 +36,4 @@ end
 ---------------------------
 --          RUN          --
 ---------------------------
-transparency_override()
+--transparency_override()
