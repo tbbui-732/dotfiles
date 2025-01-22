@@ -24,9 +24,9 @@ vim.opt.incsearch = true
 
 vim.opt.termguicolors = true
 
-vim.opt.scrolloff = 8
+vim.opt.scrolloff = 4
 vim.opt.signcolumn = "yes"
--- vim.opt.colorcolumn = "80"
+-- vim.opt.colorcolumn = "89"
 
 vim.opt.updatetime = 50
 
@@ -38,3 +38,6 @@ vim.cmd("autocmd BufEnter * setlocal formatoptions-=cro")
 
 -- netrw settings
 vim.cmd("let g:netrw_banner=0")
+
+-- clipboard
+vim.api.nvim_set_option("clipboard", "unnamed")

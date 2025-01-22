@@ -98,6 +98,7 @@ alias gc="git commit"
 alias gp="git push"
 alias gpu="git pull"
 alias gck="git checkout"
+alias c="clear"
 
 # Nvm settings
 export NVM_DIR="$HOME/.nvm"

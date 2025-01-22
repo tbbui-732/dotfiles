@@ -6,12 +6,9 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     -- Colorschemes
-    use { 'rose-pine/neovim' }
     use { 'nordtheme/vim' }
-    use { 'iruzo/matrix-nvim' }
     use { 'miikanissi/modus-themes.nvim' }
-    use { "ellisonleao/gruvbox.nvim" }
-    use { "talha-akram/noctis.nvim" }
+    use { 'p00f/alabaster.nvim' }
 
     -- Language Server
     use {
@@ -41,12 +38,15 @@ return require('packer').startup(function(use)
         'nvim-telescope/telescope.nvim', tag = '0.1.8',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
-    use {
-        'nvim-lualine/lualine.nvim',
-        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
-    }
+    --use {
+        --    'nvim-lualine/lualine.nvim',
+        --    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+        --}
     use { 'ray-x/lsp_signature.nvim' }
     use { 'nvim-tree/nvim-web-devicons' }
     use { 'lewis6991/gitsigns.nvim' }
     use { 'm4xshen/autoclose.nvim' }
+    
+    -- For fun 
+    use { 'ThePrimeagen/vim-be-good' }
 end)
