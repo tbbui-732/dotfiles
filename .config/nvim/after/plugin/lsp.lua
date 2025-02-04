@@ -23,6 +23,21 @@ vim.api.nvim_create_autocmd({"CursorHold"}, {
     end
 })
 
+-- Disable highlighting whenever attaching to a new buffer
+vim.api.nvim_create_autocmd('LspAttach', {
+  callback = function(event)
+    local id = vim.tbl_get(event, 'data', 'client_id')
+    local client = id and vim.lsp.get_client_by_id(id)
+    if client == nil then
+      return
+    end
+
+    -- Disable semantic highlights
+    client.server_capabilities.semanticTokensProvider = nil
+  end
+})
+
+
 -- LSP actions
 vim.keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>')
 vim.keymap.set('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<cr>')

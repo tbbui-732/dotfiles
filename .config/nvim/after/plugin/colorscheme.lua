@@ -2,9 +2,11 @@
 -- COLORSCHEME SELECTION --
 ---------------------------
 vim.o.background = "dark"
-vim.cmd.colorscheme "nord"
+--vim.cmd.colorscheme "nord"
 --vim.cmd.colorscheme "modus_vivendi"
 --vim.cmd.colorscheme "alabaster"
+
+vim.cmd("syntax off")
 
 
 ---------------------------
@@ -36,4 +38,4 @@ end
 ---------------------------
 --          RUN          --
 ---------------------------
---transparency_override()
+transparency_override()
