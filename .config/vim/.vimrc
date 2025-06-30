@@ -1,6 +1,6 @@
 " Basics
 set nocompatible
-syntax off
+syntax on
 filetype plugin indent on
 let mapleader = " "
 
