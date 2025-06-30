@@ -1,7 +1,6 @@
 " Basics
 set nocompatible
-filetype off
-syntax on
+syntax off
 filetype plugin indent on
 let mapleader = " "
 
@@ -19,17 +18,20 @@ set ruler
 set encoding=utf-8
 
 " Whitespace
-set wrap
-set textwidth=79
+set nowrap
 set formatoptions=tcqrn1
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
 set noshiftround
+set autoindent
+set smartindent
+set cindent
+set cinoptions=:0,l1,t0,g0
 
 " Cursor motion
-set scrolloff=8
+set scrolloff=4
 set backspace=indent,eol,start
 set cursorline
 
@@ -61,19 +63,22 @@ set wildmenu
 " Colorscheme (terminal)
 set t_Co=256
 set background=dark
-colorscheme sorbet
-let g:solarized_termcolors=256
-let g:solarized_termtrans=1
-
-" Remaps
-nnoremap <C-d> <C-d>zz
-nnoremap <C-u> <C-u>zz
 
 " File Navigation
 nnoremap <leader>ef :Ex<CR>
 
-" Turn off annoying bell and flash
-set noerrorbells visualbell t_vb=
-
 " Disable comment continuation
 autocmd FileType * set formatoptions-=cro
+
+" Hide unnecessary netrw information
+let g:netrw_banner = 0
+let g:netrw_list_hide = '.*\.swp$,.DS_Store,*/tmp/*,*.so,*.swp,*.zip,*.git,^\./$'
+
+" Command to remove ending white spaces
+command! Strip %s/\s\+$//e
+
+" Vertical line for limiting source code width
+set colorcolumn=79
+
+" system clipboard
+set clipboard=unnamed

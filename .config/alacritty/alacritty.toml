@@ -1,31 +1,22 @@
-import = [ "~/.config/alacritty/themes/taerminal.toml" ]
-
+general.import = [ "~/.config/alacritty/themes/taerminal.toml" ]
 
 [window]
-padding = { x = 10 }
+#padding = { x = 10 }
 opacity = 1.00
-decorations = "None"
-
+#decorations = "None"
 
 [font]
-#normal      = { family = "JetBrainsMono Nerd Font Mono", style = "Regular" }
-#bold        = { family = "JetBrainsMono Nerd Font Mono", style = "Bold" }
-#italic      = { family = "JetBrainsMono Nerd Font Mono", style = "Italic" }
-#bold_italic = { family = "JetBrainsMono Nerd Font Mono", style = "Bold Italic" }
+normal = { family = "JuliaMono" }
+bold = { family = "JuliaMono" }
+italic = { family = "JuliaMono" }
+bold_italic = { family = "JuliaMono" }
 
-#normal      = { family = "SFMono Nerd Font", style = "Regular" }
-#bold        = { family = "SFMono Nerd Font", style = "Bold" }
-#italic      = { family = "SFMono Nerd Font", style = "Italic" }
-#bold_italic = { family = "SFMono Nerd Font", style = "Bold Italic" }
-
-size = 25.0
+size = 14
 offset = { x = 0, y = 0 }
-
 
 [cursor]
 style = { shape="Block", blinking="On" }
 blink_interval = 450
-
 
 [mouse]
 hide_when_typing = true
