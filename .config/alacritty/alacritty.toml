@@ -1,4 +1,4 @@
-general.import = [ "~/.config/alacritty/themes/taerminal.toml" ]
+#general.import = [ "~/.config/alacritty/themes/taerminal.toml" ]
 
 [window]
 #padding = { x = 10 }
