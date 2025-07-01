@@ -20,10 +20,10 @@ set encoding=utf-8
 " Whitespace
 set nowrap
 set formatoptions=tcqrn1
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-set expandtab
+set tabstop=4               " \t will appear as 4 spaces wide
+set shiftwidth=4            " number of spaces when using '<<' and '>>'
+set softtabstop=4           " tab in insert mode is the same as 4 spaces
+set expandtab               " converts tabs to spaces
 set noshiftround
 set autoindent
 set smartindent
@@ -33,7 +33,6 @@ set cinoptions=:0,l1,t0,g0
 " Cursor motion
 set scrolloff=4
 set backspace=indent,eol,start
-set cursorline
 
 " Move up/down editor lines
 nnoremap j gj
@@ -57,12 +56,44 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
-set showmatch
 set wildmenu
+set noshowmatch
 
-" Colorscheme (terminal)
+" Colorscheme (custom)
 set t_Co=256
 set background=dark
+
+" Core interface
+highlight Normal         ctermfg=white       ctermbg=black
+highlight LineNr         ctermfg=blue        ctermbg=black
+highlight ColorColumn    ctermbg=blue
+
+" Code elements
+highlight Comment        ctermfg=blue        ctermbg=black
+highlight Constant       ctermfg=white       ctermbg=black
+highlight String         ctermfg=white       ctermbg=black
+highlight Identifier     ctermfg=white       ctermbg=black
+highlight Statement      ctermfg=white       ctermbg=black
+highlight PreProc        ctermfg=white       ctermbg=black
+highlight Type           ctermfg=white       ctermbg=black
+highlight Special        ctermfg=white       ctermbg=black
+highlight Underlined     ctermfg=white       ctermbg=black
+highlight Todo           ctermfg=yellow      ctermbg=black
+
+" Cursor line and number column
+highlight CursorLine     cterm=none          ctermbg=darkgrey
+highlight CursorLineNr   ctermfg=blue        ctermbg=black
+
+" Status line
+highlight StatusLine     ctermfg=white       ctermbg=black
+highlight StatusLineNC   ctermfg=grey        ctermbg=black
+
+" Search highlights
+highlight Search         ctermfg=black       ctermbg=white
+highlight IncSearch      ctermfg=black       ctermbg=white
+
+" Visual selection
+highlight Visual         ctermfg=black       ctermbg=white
 
 " File Navigation
 nnoremap <leader>ef :Ex<CR>
