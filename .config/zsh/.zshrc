@@ -39,6 +39,7 @@ alias v="vim"
 alias rip="rip --graveyard ~/.local/share/Trash"
 alias gcm="git commit -m"
 alias gap="git add -p"
+alias cpc="xclip -sel c"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
