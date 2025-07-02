@@ -1,6 +1,6 @@
 " Basics
 set nocompatible
-syntax on
+syntax off
 filetype plugin indent on
 let mapleader = " "
 
@@ -30,9 +30,10 @@ set smartindent
 set cindent
 set cinoptions=:0,l1,t0,g0
 
-" Cursor motion
+" Cursor
 set scrolloff=4
 set backspace=indent,eol,start
+set cursorline
 
 " Move up/down editor lines
 nnoremap j gj
@@ -65,35 +66,10 @@ set background=dark
 
 " Core interface
 highlight Normal         ctermfg=white       ctermbg=black
-highlight LineNr         ctermfg=yellow        ctermbg=black
+highlight LineNr         ctermfg=yellow      ctermbg=black
 highlight ColorColumn    ctermbg=red
-
-" Code elements
-highlight Comment        ctermfg=gray        ctermbg=black
-highlight Constant       ctermfg=white       ctermbg=black
-highlight String         ctermfg=white       ctermbg=black
-highlight Identifier     ctermfg=white       ctermbg=black
-highlight Statement      ctermfg=white       ctermbg=black
-highlight PreProc        ctermfg=white       ctermbg=black
-highlight Type           ctermfg=white       ctermbg=black
-highlight Special        ctermfg=white       ctermbg=black
-highlight Underlined     ctermfg=white       ctermbg=black
-highlight Todo           ctermfg=yellow      ctermbg=black
-
-" Cursor line and number column
-highlight CursorLine     cterm=none          ctermbg=darkgrey
-highlight CursorLineNr   ctermfg=white        ctermbg=black
-
-" Status line
-highlight StatusLine     ctermfg=white       ctermbg=black
-highlight StatusLineNC   ctermfg=grey        ctermbg=black
-
-" Search highlights
-highlight Search         ctermfg=black       ctermbg=white
-highlight IncSearch      ctermfg=black       ctermbg=white
-
-" Visual selection
-highlight Visual         ctermfg=black       ctermbg=white
+highlight CursorLine     cterm=none          ctermbg=black
+highlight CursorLineNr   ctermfg=black       ctermbg=green
 
 " File Navigation
 nnoremap <leader>ef :Ex<CR>
@@ -106,7 +82,7 @@ let g:netrw_banner = 0
 let g:netrw_list_hide = '.*\.swp$,.DS_Store,*/tmp/*,*.so,*.swp,*.zip,*.git,^\./$'
 
 " Command to remove ending white spaces
-command! Strip %s/\s\+$//e
+nnoremap <leader>ws :%s/\s\+$//e<CR>:noh<CR>
 
 " Vertical line for limiting source code width
 set colorcolumn=79
