@@ -65,11 +65,11 @@ set background=dark
 
 " Core interface
 highlight Normal         ctermfg=white       ctermbg=black
-highlight LineNr         ctermfg=blue        ctermbg=black
-highlight ColorColumn    ctermbg=blue
+highlight LineNr         ctermfg=yellow        ctermbg=black
+highlight ColorColumn    ctermbg=red
 
 " Code elements
-highlight Comment        ctermfg=blue        ctermbg=black
+highlight Comment        ctermfg=gray        ctermbg=black
 highlight Constant       ctermfg=white       ctermbg=black
 highlight String         ctermfg=white       ctermbg=black
 highlight Identifier     ctermfg=white       ctermbg=black
@@ -82,7 +82,7 @@ highlight Todo           ctermfg=yellow      ctermbg=black
 
 " Cursor line and number column
 highlight CursorLine     cterm=none          ctermbg=darkgrey
-highlight CursorLineNr   ctermfg=blue        ctermbg=black
+highlight CursorLineNr   ctermfg=white        ctermbg=black
 
 " Status line
 highlight StatusLine     ctermfg=white       ctermbg=black
