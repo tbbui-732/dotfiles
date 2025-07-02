@@ -1,6 +1,6 @@
 " Basics
 set nocompatible
-syntax off
+syntax on
 filetype plugin indent on
 let mapleader = " "
 
@@ -63,13 +63,7 @@ set noshowmatch
 " Colorscheme (custom)
 set t_Co=256
 set background=dark
-
-" Core interface
-highlight Normal         ctermfg=white       ctermbg=black
-highlight LineNr         ctermfg=yellow      ctermbg=black
-highlight ColorColumn    ctermbg=red
-highlight CursorLine     cterm=none          ctermbg=black
-highlight CursorLineNr   ctermfg=black       ctermbg=green
+colorscheme dogrun
 
 " File Navigation
 nnoremap <leader>ef :Ex<CR>
