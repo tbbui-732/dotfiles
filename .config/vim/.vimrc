@@ -1,85 +1,80 @@
-" Basics
+" basics
 set nocompatible
 syntax on
 filetype plugin indent on
 let mapleader = " "
 
-" Security
+" security: dont run random vim commands
 set modelines=0
 
-" Show line numbers
+" system clipboard
+set clipboard=unnamed
+
+" show line numbers
 set number
 set relativenumber
+set noruler
 
-" Show file stats
-set ruler
-
-" Encoding
+" encoding
 set encoding=utf-8
 
-" Whitespace
+" text formatting (formatoptions is "tcq" by default!)
+set colorcolumn=79
+set textwidth=79
 set nowrap
-set formatoptions=tcqrn1
+
+" indentatino
+set expandtab               " convert tabs (\t) to spaces
 set tabstop=4               " \t will appear as 4 spaces wide
-set shiftwidth=4            " number of spaces when using '<<' and '>>'
+set shiftwidth=4            " number of spaces when using shifting (<, >)
 set softtabstop=4           " tab in insert mode is the same as 4 spaces
-set expandtab               " converts tabs to spaces
-set noshiftround
-set autoindent
-set smartindent
-set cindent
-set cinoptions=:0,l1,t0,g0
+set shiftround              " round indents to multiple of 'shiftwidth'
 
-" Cursor
+" auto-indentation and c-like formatting
+set autoindent              " copy indent from current line to new line
+set cindent                 " similar to smartindent (c-like indentation)
+set cinoptions=:0,l1,g0,t0  " defines how cindent behaves
+
+" cursor
 set scrolloff=4
-set backspace=indent,eol,start
-set cursorline
+set nocursorline
 
-" Move up/down editor lines
-nnoremap j gj
-nnoremap k gk
-
-" Allow hidden buffers
+" allow hidden buffers
 set hidden
 
-" Rendering
+" rendering
 set ttyfast
 
-" Status bar
+" status bar
 set laststatus=2
 
-" Last line
+" last line
 set showmode
 set showcmd
 
-" Searching
+" searching
 set hlsearch
 set incsearch
 set ignorecase
 set smartcase
-set wildmenu
 set noshowmatch
 
-" Colorscheme (custom)
+" command-line completion
+set wildmenu
+
+" colorscheme (custom)
 set t_Co=256
 set background=dark
 colorscheme dogrun
 
-" File Navigation
+" --- REMAPS ---
+" file navigation
 nnoremap <leader>ef :Ex<CR>
 
-" Disable comment continuation
-autocmd FileType * set formatoptions-=cro
-
-" Hide unnecessary netrw information
-let g:netrw_banner = 0
-let g:netrw_list_hide = '.*\.swp$,.DS_Store,*/tmp/*,*.so,*.swp,*.zip,*.git,^\./$'
-
-" Command to remove ending white spaces
+" remove trailing white spaces
 nnoremap <leader>ws :%s/\s\+$//e<CR>:noh<CR>
 
-" Vertical line for limiting source code width
-set colorcolumn=79
-
-" system clipboard
-set clipboard=unnamed
+" --- NETRW ---
+" hide unnecessary netrw information
+let g:netrw_banner = 0
+let g:netrw_list_hide = '.*\.swp$,.DS_Store,*/tmp/*,*.so,*.swp,*.zip,*.git,^\./$'
