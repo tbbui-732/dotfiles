@@ -11,7 +11,7 @@ set modelines=0
 set clipboard=unnamed
 
 " show line numbers
-set number
+"set number
 set relativenumber
 set noruler
 
@@ -33,7 +33,7 @@ set shiftround              " round indents to multiple of 'shiftwidth'
 " auto-indentation and c-like formatting
 set autoindent              " copy indent from current line to new line
 set cindent                 " similar to smartindent (c-like indentation)
-set cinoptions=:0,l1,g0,t0  " defines how cindent behaves
+set cinoptions=:0,l1,g0,t0,(0,W4,:4  " defines how cindent behaves
 
 " cursor
 set scrolloff=4
@@ -73,6 +73,9 @@ nnoremap <leader>ef :Ex<CR>
 
 " remove trailing white spaces
 nnoremap <leader>ws :%s/\s\+$//e<CR>:noh<CR>
+
+" dumb autocomplete
+inoremap <Tab> <C-n>
 
 " --- NETRW ---
 " hide unnecessary netrw information
