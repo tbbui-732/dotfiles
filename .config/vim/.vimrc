@@ -75,6 +75,6 @@ nnoremap <leader>ef :Ex<CR>
 nnoremap <leader>ws :%s/\s\+$//e<CR>:noh<CR>
 
 " --- NETRW ---
-" hide unnecessary netrw information
 let g:netrw_banner = 0
 let g:netrw_list_hide = '.*\.swp$,.DS_Store,*/tmp/*,*.so,*.swp,*.zip,*.git,^\./$'
+let g:netrw_bufsettings = 'noma nomod nobl nowrap ro'
