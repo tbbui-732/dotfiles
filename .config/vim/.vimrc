@@ -11,7 +11,7 @@ set modelines=0
 set clipboard=unnamed
 
 " show line numbers
-"set number
+set number
 set relativenumber
 set noruler
 
@@ -30,13 +30,13 @@ set shiftwidth=4            " number of spaces when using shifting (<, >)
 set softtabstop=4           " tab in insert mode is the same as 4 spaces
 set shiftround              " round indents to multiple of 'shiftwidth'
 
-" auto-indentation and c-like formatting
-set autoindent              " copy indent from current line to new line
-set cindent                 " similar to smartindent (c-like indentation)
-set cinoptions=l1,g0,t0,(0,W4,:4  " defines how cindent behaves
+" auto-indentation and formatting
+set autoindent                      " copy indent from current line to new line
+set cindent                         " similar to smartindent (c-like indentation)
+set cinoptions=l1,g0,t0,(0,W4,:4    " defines how cindent behaves
 
 " cursor
-set scrolloff=4
+set scrolloff=2
 set nocursorline
 
 " allow hidden buffers
