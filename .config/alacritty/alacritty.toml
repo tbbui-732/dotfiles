@@ -1,22 +1,18 @@
-#general.import = [ "~/.config/alacritty/themes/taerminal.toml" ]
+[general]
+import = ["themes/hardhacker.toml"]
 
 [window]
-#padding = { x = 10 }
 opacity = 1.00
-#decorations = "None"
 
 [font]
-normal = { family = "JuliaMono" }
-bold = { family = "JuliaMono" }
-italic = { family = "JuliaMono" }
-bold_italic = { family = "JuliaMono" }
-
+normal = { family = "Liberation Mono" }
+bold = { family = "Liberation Mono" }
+italic = { family = "Liberation Mono" }
+bold_italic = { family = "Liberation Mono" }
 size = 14
-offset = { x = 0, y = 0 }
 
 [cursor]
-style = { shape="Block", blinking="On" }
-blink_interval = 450
+style = { shape="Block", blinking="Off" }
 
 [mouse]
 hide_when_typing = true
