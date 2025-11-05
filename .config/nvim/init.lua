@@ -1,4 +1,4 @@
--- Bootstrap lazy.nvim
+-- [lazy]
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
     local lazyrepo = "https://github.com/folke/lazy.nvim.git"
@@ -17,7 +17,6 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
--- [lazy]
 require("lazy").setup({
     spec = {
         -- treesitter
@@ -41,7 +40,8 @@ require("lazy").setup({
         { 'hrsh7th/cmp-buffer' },
         { 'hrsh7th/cmp-path' },
         { 'hrsh7th/cmp-cmdline' },
-        { 'hrsh7th/nvim-cmp' }
+        { 'hrsh7th/nvim-cmp' },
+        { 'hrsh7th/vim-vsnip' }
     },
     install = { colorscheme = { "habamax" } },
     checker = { enabled = true },
@@ -58,60 +58,39 @@ require("nvim-treesitter").setup({
     }
 })
 
+-- [autocomplete]
+local cmp = require('cmp')
+cmp.setup({
+  snippet = {
+    expand = function(args)
+      vim.fn["vsnip#anonymous"](args.body)  -- required for vsnip
+    end,
+  },
+  mapping = cmp.mapping.preset.insert({
+    ['<C-Space>'] = cmp.mapping.complete(),     -- manual completion trigger
+    ['<CR>'] = cmp.mapping.confirm({ select = true }),
+    ['<Tab>'] = cmp.mapping.select_next_item(),
+    ['<S-Tab>'] = cmp.mapping.select_prev_item(),
+  }),
+  sources = cmp.config.sources({
+    { name = 'nvim_lsp' },   -- LSP suggestions
+    { name = 'buffer' },     -- words from buffer
+    { name = 'path' },       -- filesystem paths
+  }),
+})
+
+-- LSP capabilities for nvim-cmp
+local cmp_nvim_lsp = require('cmp_nvim_lsp')
+local capabilities = cmp_nvim_lsp.default_capabilities()
+
+-- Mason setup (install LSPs automatically)
 require("mason").setup()
 require("mason-lspconfig").setup({
   automatic_installation = true,
 })
 
--- [vimrc settings]
-vim.opt.modelines = 0
-vim.opt.clipboard = "unnamed"   -- use system clipboard
-vim.opt.number = true           -- line numbers
-vim.opt.relativenumber = true
-vim.opt.ruler = true
-
-vim.opt.encoding = "utf-8"
-
-vim.opt.expandtab = true        -- convert tabs to spaces
-vim.opt.tabstop = 4             -- how many spaces a tab counts for
-vim.opt.shiftwidth = 4          -- number of spaces for indentation
-vim.opt.softtabstop = 4         -- tab in insert mode behaves like 4 spaces
-vim.opt.shiftround = true
-
-vim.opt.autoindent = true       -- c-like formatting
-vim.opt.cindent = true
-vim.opt.cinoptions = "l1,g0,t0,(0,W4,:4"
-
-vim.opt.scrolloff = 8           -- cursor
-vim.opt.cursorline = true
-
-vim.opt.hidden = true           -- hidden buffers / performance
-vim.opt.ttyfast = true
-vim.opt.laststatus = 2
-
-vim.opt.showmode = true         -- last line indicators
-vim.opt.showcmd = true
-
-vim.opt.hlsearch = true         -- searching
-vim.opt.incsearch = true
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
-vim.opt.showmatch = false
-
-vim.opt.wildmenu = true         -- command-line
-
--- [remaps]
-vim.keymap.set("n", "<leader>ef", ":Ex<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>ws", ":%s/\\s\\+$//e<CR>:noh<CR>", { noremap = true, silent = true })
-
--- [netrw]
-vim.g.netrw_banner = 0
-vim.g.netrw_list_hide = ".*\\.swp$,.DS_Store,*/tmp/*,*.so,*.swp,*.zip,*.git,^\\./$"
-vim.g.netrw_bufsettings = "noma nomod nobl nowrap ro"
-
--- [hover info; cursor on symbol]
-vim.o.updatetime = 500          -- shorter delay for cursorhold
-
+-- Optional: enable hover diagnostics automatically
+vim.o.updatetime = 500
 vim.api.nvim_create_autocmd("CursorHold", {
   pattern = "*",
   callback = function()
