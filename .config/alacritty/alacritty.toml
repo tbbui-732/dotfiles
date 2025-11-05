@@ -1,18 +1,18 @@
 [general]
-import = ["themes/hardhacker.toml"]
+import = ["~/.config/alacritty/themes/solarized_dark.toml"]
 
 [window]
 opacity = 1.00
 
 [font]
-normal = { family = "Liberation Mono" }
-bold = { family = "Liberation Mono" }
-italic = { family = "Liberation Mono" }
-bold_italic = { family = "Liberation Mono" }
 size = 14
+normal      =  { family = "Liberation Mono" }
+bold        =  { family = "Liberation Mono" }
+italic      =  { family = "Liberation Mono" }
+bold_italic =  { family = "Liberation Mono" }
 
 [cursor]
-style = { shape="Block", blinking="Off" }
+style = {shape = "Block"}
 
 [mouse]
 hide_when_typing = true
