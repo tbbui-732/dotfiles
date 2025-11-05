@@ -1,5 +1,2 @@
-things i use: 
-
-term: alacritty
-
+terminal emulator: alacritty
 editor: vim + tmux
