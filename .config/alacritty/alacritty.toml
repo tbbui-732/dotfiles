@@ -1,15 +1,16 @@
 [general]
-import = ["~/.config/alacritty/themes/solarized_dark.toml"]
+import = ["~/.config/alacritty/themes/catpuccin-mocha.toml"]
 
 [window]
 opacity = 1.00
+decorations="none"
 
 [font]
 size = 14
-normal      =  { family = "Liberation Mono" }
-bold        =  { family = "Liberation Mono" }
-italic      =  { family = "Liberation Mono" }
-bold_italic =  { family = "Liberation Mono" }
+normal      =  { family = "DepartureMono Nerd Font Mono" }
+bold        =  { family = "DepartureMono Nerd Font Mono" }
+italic      =  { family = "DepartureMono Nerd Font Mono" }
+bold_italic =  { family = "DepartureMono Nerd Font Mono" }
 
 [cursor]
 style = {shape = "Block"}

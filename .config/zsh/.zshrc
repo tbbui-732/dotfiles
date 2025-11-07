@@ -1,6 +1,8 @@
 # Environment variables
 export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 export ZSH=$HOME/.oh-my-zsh
+export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+export PATH="$PATH:/opt/neovide/target/debug"
 
 # Vulkan stuff
 export VULKAN_SDK=$HOME/vulkan/1.4.328.1/x86_64
