@@ -4,11 +4,12 @@ filetype plugin indent on
 
 set modelines=0 " security: dont run random vim commands
 set clipboard=unnamed " copy to system clipboard
+set nowrap
 
 " show line numbers
-set number
-set relativenumber
-set noruler
+"set number
+"set relativenumber
+set ruler
 
 set encoding=utf-8 " encoding
 
@@ -23,9 +24,10 @@ set shiftround     " round indents to multiple of 'shiftwidth'
 set autoindent                      " copy indent from current line to new line
 set cindent                         " similar to smartindent (c-like indentation)
 set cinoptions=l1,g0,t0,(0,W4,:4    " defines how cindent behaves
+set formatoptions-="cro"
 
 " cursor
-set scrolloff=2
+set scrolloff=4
 set cursorline
 
 set hidden " allow hidden buffers
@@ -48,7 +50,7 @@ set wildmenu " command-line completion
 " colorscheme
 syntax on
 set background=dark
-colo solarized
+colo elflord
 
 " mouse
 set mouse=a
